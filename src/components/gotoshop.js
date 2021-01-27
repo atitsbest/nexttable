@@ -10,8 +10,8 @@ const Gotoshop = ({ text }) => {
         einzigartiger Tischzum Wohnen und Leben. Stilvolles Design fürperfekte
         Augenblicke.
       </h1>
-      <Link className="button" to="/choose/">
-        Auswählen...
+      <Link className="button" to="/choose">
+        shop...
       </Link>
     </div>
   )

@@ -25,6 +25,7 @@ const SecondPage = () => (
     <ChooseSize />
     <ChooseWood />
     <GotoPayment />
+    <br />
     <Divider />
     <Delivery />
     <Divider />

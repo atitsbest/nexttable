@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 import Divider from "./divider"
+import love from "../images/love.png"
+import contact from "../images/contact.png"
 
 const Footer = () => (
   <footer style={{ width: "100%", marginBottom: 32 }}>
@@ -24,15 +26,15 @@ const Footer = () => (
             Datenschutz
           </Link>
         </div>
-        <div className="">
-          <Link to="/choose/" className="uppercase text-xs mr-3 text-gray-500">
+        <div className="grid grid-cols-3 gap-2">
+          <Link to="/choose" className="uppercase text-xs text-gray-500">
             Shop
           </Link>
-          <Link to="/" className="uppercase text-xs mr-3 text-gray-500">
-            Love
+          <Link to="/" className="mx-auto">
+            <img src={love} width="16" style={{ opacity: 0.7 }} />
           </Link>
-          <Link to="/" className="uppercase text-xs text-gray-500">
-            Contact
+          <Link to="/" className="mx-auto">
+            <img src={contact} width="16" style={{ opacity: 0.7 }} />
           </Link>
         </div>
       </div>

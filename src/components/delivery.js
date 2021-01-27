@@ -1,12 +1,14 @@
-import PropTypes from "prop-types"
 import React from "react"
+import icon from "../images/delivery.png"
 
 function Delivery() {
   return (
     <div className="container mx-auto">
       <div className="flex flex-row">
-        <div className="flex-1">icon</div>
-        <div className="w-3/6 text-sm ml-2 mr-2">
+        <div className="">
+          <img src={icon} width="32" />
+        </div>
+        <div className="w-3/6 text-sm ml-4 mr-2">
           <strong style={{ fontFamily: "Benton Sans Medium" }}>
             Lieferbedinungen
           </strong>
