@@ -8,7 +8,7 @@ const Hero = ({ text }) => {
     query {
       placeholderImage: file(relativePath: { eq: "xtable.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 960) {
+          fluid(maxWidth: 1960) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -23,11 +23,17 @@ const Hero = ({ text }) => {
   return (
     <div className="max-w-full bg-black">
       <div className="container mx-auto relative">
-        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+        <Img
+          fluid={{
+            ...data.placeholderImage.childImageSharp.fluid,
+          }}
+        />
         {text && (
-          <h1 className="absolute text-3xl text-white text-center font-bold inset-0 mt-8">
-            {text}
-          </h1>
+          <div className="absolute inset-0 flex justify-center mt-8">
+            <h1 className="text-3xl text-white text-center font-bold max-w-sm">
+              {text}
+            </h1>
+          </div>
         )}
       </div>
     </div>

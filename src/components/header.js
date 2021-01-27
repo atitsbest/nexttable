@@ -4,7 +4,7 @@ import React from "react"
 import Logo from "./logo"
 
 const Header = ({ siteTitle }) => (
-  <header style={{ width: "100%", background: "black" }}>
+  <header style={{ background: "#1d1d1d" }} className="pt-4 pb-4">
     <div className="container mx-auto">
       <h1 style={{ margin: 0, textAlign: "center" }}>
         <Link

@@ -4,13 +4,7 @@ import React from "react"
 function Divider() {
   return (
     <div className="container mx-auto">
-      <div
-        style={{
-          width: "100%",
-          borderTop: "1px solid #bbb",
-          margin: "32px 0",
-        }}
-      ></div>
+      <div className="mb-4 mt-4 border-t border-gray-400"></div>
     </div>
   )
 }

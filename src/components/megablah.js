@@ -7,65 +7,72 @@ import Divider from "./divider"
 const Megablah = () => {
   const data = useStaticQuery(graphql`
     query {
-      one: file(relativePath: { eq: "xtable.jpg" }) {
+      one: file(relativePath: { eq: "choose_maple.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       two: file(relativePath: { eq: "holz1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       blah1: file(relativePath: { eq: "blah1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       blah2: file(relativePath: { eq: "blah2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       blah3: file(relativePath: { eq: "blah3.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       blah4: file(relativePath: { eq: "blah4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       apple: file(relativePath: { eq: "wood_apple.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       nut: file(relativePath: { eq: "wood_nut.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       maple: file(relativePath: { eq: "wood_maple.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      oak: file(relativePath: { eq: "wood_oak.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -74,7 +81,7 @@ const Megablah = () => {
   `)
 
   return (
-    <>
+    <div className="container mx-auto">
       <Blahblah
         image={data.one.childImageSharp.fluid}
         header="Einzigartiges Design"
@@ -130,11 +137,11 @@ const Megablah = () => {
       />
       <br />
       <Blah
-        image={data.two.childImageSharp.fluid}
-        header="Faszinierende Fußlösung"
-        text="Egal wo oder wie viele Platz nehmen, jeder kommt in den Genuss der Beinfreiheit, Möglichkeit zur gemütlichen Fußablage inklusive. X-fache Verschränkungen zu einem Ganzen."
+        image={data.oak.childImageSharp.fluid}
+        header="Eichenholz"
+        text="Hart, standfest und äußerst stabil. Perfekt geeignet für tragende Aufgaben. Zeitlos im Erscheinungsbild."
       />
-    </>
+    </div>
   )
 }
 
