@@ -8,7 +8,7 @@ const Footer = () => (
       <Divider />
       <div className="container flex justify-between">
         <div className="">
-          <Link to="/agb/" className="uppercase text-xs mr-3 text-gray-500">
+          <Link to="/agbs/" className="uppercase text-xs mr-3 text-gray-500">
             AGBs
           </Link>
           <Link

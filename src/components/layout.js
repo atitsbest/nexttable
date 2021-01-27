@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="min-h-screen flex flex-col justify-center">
+    <div className="flex flex-col justify-center">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Subheader siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="">
