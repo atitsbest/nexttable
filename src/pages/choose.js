@@ -11,6 +11,9 @@ import Hero from "../components/hero"
 import ChooseSize from "../components/choosesize"
 import ChooseWood from "../components/choosewood"
 import GotoPayment from "../components/gotopayment"
+import Delivery from "../components/delivery"
+import Ensurace from "../components/ensurance"
+import Fulfillment from "../components/fulfillment"
 
 const SecondPage = () => (
   <Layout>
@@ -22,6 +25,13 @@ const SecondPage = () => (
     <ChooseSize />
     <ChooseWood />
     <GotoPayment />
+    <Divider />
+    <Delivery />
+    <Divider />
+    <Ensurace />
+    <Divider />
+    <Fulfillment />
+    <Divider />
     <HappyLady />
     <Contact />
     <Divider />
