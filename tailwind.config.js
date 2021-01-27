@@ -6,12 +6,6 @@ module.exports = {
       sans: ["Benton Sans Light", "sans-serif"],
       serif: ["Georgia", "serif"],
     },
-    container: {
-      padding: {
-        xl: "5rem",
-        "2xl": "6rem",
-      },
-    },
     extend: {},
   },
   variants: {
