@@ -4,19 +4,8 @@ import React from "react"
 import { Theme } from "../utils"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: Theme.colors.headerBg,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header style={{ width: "100%", background: "black" }}>
+    <div className="container mx-auto">
       <h1 style={{ margin: 0, textAlign: "center" }}>
         <Link
           to="/"

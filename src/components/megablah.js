@@ -21,6 +21,34 @@ const Megablah = () => {
           }
         }
       }
+      blah1: file(relativePath: { eq: "blah1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blah2: file(relativePath: { eq: "blah2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blah3: file(relativePath: { eq: "blah3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blah4: file(relativePath: { eq: "blah4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       apple: file(relativePath: { eq: "wood_apple.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
@@ -60,7 +88,7 @@ const Megablah = () => {
       />
       <Divider />
       <Blahblah
-        image={data.two.childImageSharp.fluid}
+        image={data.blah3.childImageSharp.fluid}
         header="High-end Tisch-Plattenaufbau"
         text="Die speziell hierfür entwickelte „Sandwichlösung“ aus Holz, ermöglicht eine extrem tragfähige Holzplatte mit weiter und formstabiler Auskragung, ganz ohne störenden Tischzargen."
       />
@@ -84,19 +112,19 @@ const Megablah = () => {
       />
       <Divider />
       <Blahblah
-        image={data.two.childImageSharp.fluid}
+        image={data.blah2.childImageSharp.fluid}
         header="Natur pur"
         text="Durch die Vielfältigkeit, die Holz bietet, kann man Design und Konstruktion aus diesem einen Werkstoff verwirklichen. Zur Oberflächenbehandlung wird reines Naturöl verwendet, um die samtige Haptik besonders heraus zu arbeiten und um das Holz zu schützen."
       />
       <Divider />
       <Blahblah
-        image={data.two.childImageSharp.fluid}
+        image={data.blah1.childImageSharp.fluid}
         header="Höchste Handwerkskunst"
         text="Virtuelles Designobjekt wird zum Leben erweckt – kompromisslos per Hand in der eigenen Holzwerkstatt. Mehrfache verschränkte Knotenverbindung werden für jeden Tisch individuell gefertigt/hergestellt/produziert."
       />
       <Divider />
       <Blahblah
-        image={data.two.childImageSharp.fluid}
+        image={data.blah4.childImageSharp.fluid}
         header="Faszinierende Fußlösung"
         text="Egal wo oder wie viele Platz nehmen, jeder kommt in den Genuss der Beinfreiheit, Möglichkeit zur gemütlichen Fußablage inklusive. X-fache Verschränkungen zu einem Ganzen."
       />

@@ -31,7 +31,6 @@ const IndexPage = () => (
     <Contact />
     <Divider />
     <Megablah />
-    <Link to="/choose/">Go to page 2</Link> <br />
   </Layout>
 )
 

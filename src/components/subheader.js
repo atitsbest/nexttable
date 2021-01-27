@@ -17,11 +17,7 @@ function Subheader({ siteTitle }) {
   }
 
   return (
-    <div
-      style={{
-        margin: `0 auto`,
-      }}
-    >
+    <div className="container mx-auto">
       <ul style={style.ul}>
         <li style={style.li}>Shop</li>
         <li style={style.li}>Love</li>
