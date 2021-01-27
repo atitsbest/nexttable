@@ -10,6 +10,8 @@ import Divider from "../components/divider"
 import Swelltext from "../components/swelltext"
 import TheJo from "../components/thejo"
 import ChooseWood from "../components/choosewood"
+import Contact from "../components/contact"
+import Megablah from "../components/megablah"
 
 const IndexPage = () => (
   <Layout>
@@ -26,6 +28,9 @@ const IndexPage = () => (
     />
     <ChooseWood />
     <Divider />
+    <Contact />
+    <Divider />
+    <Megablah />
     <Link to="/choose/">Go to page 2</Link> <br />
   </Layout>
 )
