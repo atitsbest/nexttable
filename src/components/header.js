@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Theme } from "../utils"
+import Logo from "./logo"
 
 const Header = ({ siteTitle }) => (
   <header style={{ width: "100%", background: "black" }}>
@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <Logo />
         </Link>
       </h1>
     </div>

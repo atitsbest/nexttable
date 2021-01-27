@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const Explosion = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "explosion.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "explosion.png" }) {
         childImageSharp {
           fluid(maxWidth: 960) {
             ...GatsbyImageSharpFluid
@@ -25,68 +25,59 @@ const Explosion = () => {
       alignItems: "center",
     },
     ul: {
-      margin: "0 32px",
       padding: 0,
       listStyleType: "none",
     },
     li: {
-      margin: "10% 0",
-      borderBottom: "1px solid #000",
+      margin: "15% 0",
+      borderBottom: "1px solid #999",
       width: "100%",
       fontSize: ".75rem",
       display: "flex",
       flexDirection: "column",
       lineHeight: ".875rem",
     },
+    strong: {
+      fontFamily: "Benton Sans Medium",
+      fontWeight: 400,
+    },
   }
 
   return (
-    <div style={{}}>
-      <div
-        style={{
-          maxWidth: 960,
-          position: "relative",
-        }}
-      >
+    <div className="container mx-auto mt-8">
+      <div className="relative">
         <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-        <div
-          style={{
-            display: "flex",
-            position: "absolute",
-            left: 0,
-            right: 0,
-            top: 0,
-            bottom: 0,
-          }}
-        >
+        <div className="flex absolute inset-0 top-1/4">
           <div style={style.half}>
-            <ul style={style.ul}>
+            <ul style={style.ul} className="mr-8">
               <li style={style.li}>
-                <strong>high-end Tischplattenaufbau</strong>
+                <strong style={style.strong}>
+                  high-end Tischplattenaufbau
+                </strong>
                 <span>Höchste Stabilität bei nur 5cm Dicke</span>
               </li>
               <li style={style.li}>
-                <strong>Einzigartiges Design</strong>
+                <strong style={style.strong}>Einzigartiges Design</strong>
                 <span>Skulptur, die alle(s) verbindet</span>
               </li>
               <li style={style.li}>
-                <strong>Natur pur</strong>
+                <strong style={style.strong}>Natur pur</strong>
                 <span>Keine versteckten Metallteile</span>
               </li>
             </ul>
           </div>
           <div style={style.half}>
-            <ul style={{ ...style.ul, textAlign: "right" }}>
+            <ul style={style.ul} className="ml-8 text-right">
               <li style={style.li}>
-                <strong>Höchste Handwerkskunst</strong>
+                <strong style={style.strong}>Höchste Handwerkskunst</strong>
                 <span>100% Handarbeit in Österreich</span>
               </li>
               <li style={style.li}>
-                <strong>Fortlaufende Holzmaserung</strong>
+                <strong style={style.strong}>Fortlaufende Holzmaserung</strong>
                 <span>Detailverliebte Holzbearbeitung</span>
               </li>
               <li style={style.li}>
-                <strong>Faszinierende Fußlösung</strong>
+                <strong style={style.strong}>Faszinierende Fußlösung</strong>
                 <span>Beinfreiheit für alle</span>
               </li>
             </ul>

@@ -2,27 +2,28 @@ import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 const ChooseWood = ({ selector }) => {
   const data = useStaticQuery(graphql`
     query {
-      appleImage: file(relativePath: { eq: "wood_apple.jpg" }) {
+      appleImage: file(relativePath: { eq: "choose_apple.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mapleImage: file(relativePath: { eq: "wood_maple.jpg" }) {
+      mapleImage: file(relativePath: { eq: "choose_maple.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      nutImage: file(relativePath: { eq: "wood_nut.jpg" }) {
+      nutImage: file(relativePath: { eq: "choose_nut.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -31,31 +32,32 @@ const ChooseWood = ({ selector }) => {
   `)
 
   return (
-    <div
-      style={{
-        position: "relative",
-      }}
-    >
+    <div className="container mx-auto">
       <ul
+        className="flex justify-around grid grid-cols-3 gap-4"
         style={{
-          display: "flex",
-          justifyContent: "space-between",
           margin: 0,
           padding: 0,
           listStyleType: "none",
         }}
       >
-        <li>
-          <Img fluid={data.appleImage.childImageSharp.fluid} />
-          <strong>Apfelbaum</strong>
+        <li className="flex flex-col text-center">
+          <Link to="/choose">
+            <Img fluid={data.appleImage.childImageSharp.fluid} />
+            <strong className="mt-1">Apfelbaum</strong>
+          </Link>
         </li>
-        <li>
-          <Img fluid={data.nutImage.childImageSharp.fluid} />
-          <strong>Nussbaum</strong>
+        <li className="flex flex-col text-center">
+          <Link to="/choose">
+            <Img fluid={data.nutImage.childImageSharp.fluid} />
+            <strong className="mt-1">Nussbaum</strong>
+          </Link>
         </li>
-        <li>
-          <Img fluid={data.mapleImage.childImageSharp.fluid} />
-          <strong>Ahorn</strong>
+        <li className="flex flex-col text-center">
+          <Link to="/choose">
+            <Img fluid={data.mapleImage.childImageSharp.fluid} />
+            <strong className="mt-1">Ahorn</strong>
+          </Link>
         </li>
       </ul>
     </div>
