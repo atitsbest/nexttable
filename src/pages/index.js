@@ -9,7 +9,7 @@ import Explosion from "../components/explosion"
 import Divider from "../components/divider"
 import Swelltext from "../components/swelltext"
 import TheJo from "../components/thejo"
-import ChooseWood from "../components/choosewood"
+import AvailableWood from "../components/availablewood"
 import Contact from "../components/contact"
 import Megablah from "../components/megablah"
 
@@ -26,7 +26,7 @@ const IndexPage = () => (
       headline="Holzarten"
       text="Next Table, das sind hochwertige Materialien, elegant und unaufdringlich kombiniert. Ein versierter Umgang mit Holz schafft ein neues Form- und Raumgefühl. Ein Tisch, mehr als ein Lebensgefühl."
     />
-    <ChooseWood />
+    <AvailableWood />
     <Divider />
     <Contact />
     <Divider />

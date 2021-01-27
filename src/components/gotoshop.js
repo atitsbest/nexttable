@@ -11,7 +11,7 @@ const Gotoshop = ({ text }) => {
         Augenblicke.
       </h1>
       <Link className="button" to="/choose/">
-        Goto shop
+        Auswählen...
       </Link>
     </div>
   )

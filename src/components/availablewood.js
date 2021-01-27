@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-const ChooseWood = ({ selector }) => {
+const AvailableWood = ({ selector }) => {
   const data = useStaticQuery(graphql`
     query {
       appleImage: file(relativePath: { eq: "choose_apple.png" }) {
@@ -32,46 +32,43 @@ const ChooseWood = ({ selector }) => {
   `)
 
   return (
-    <div class="max-w bg-gray-100 pt-4 pb-8 mt-8">
-      <div className="container mx-auto">
-        <h2
-          className="text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline"
-          style={{ fontFamily: "Benton Sans Medium" }}
-        >
-          <small className="mr-2 font-mono text-gray-500">2.</small>
-          Holz wählen
-        </h2>
-        <ul
-          className="flex justify-around grid grid-cols-3 gap-4"
-          style={{
-            margin: 0,
-            padding: 0,
-            listStyleType: "none",
-          }}
-        >
-          <li className="flex flex-col text-center cursor-pointer">
+    <div className="container mx-auto">
+      <ul
+        className="flex justify-around grid grid-cols-3 gap-4"
+        style={{
+          margin: 0,
+          padding: 0,
+          listStyleType: "none",
+        }}
+      >
+        <li className="flex flex-col text-center">
+          <Link to="/choose">
             <Img fluid={data.appleImage.childImageSharp.fluid} />
             <strong className="mt-1">Apfelbaum</strong>
-          </li>
-          <li className="flex flex-col text-center cursor-pointer">
+          </Link>
+        </li>
+        <li className="flex flex-col text-center">
+          <Link to="/choose">
             <Img fluid={data.nutImage.childImageSharp.fluid} />
             <strong className="mt-1">Nussbaum</strong>
-          </li>
-          <li className="flex flex-col text-center cursor-pointer hover:border-2 hover:border-black">
+          </Link>
+        </li>
+        <li className="flex flex-col text-center">
+          <Link to="/choose">
             <Img fluid={data.mapleImage.childImageSharp.fluid} />
             <strong className="mt-1">Ahorn</strong>
-          </li>
-        </ul>
-      </div>
+          </Link>
+        </li>
+      </ul>
     </div>
   )
 }
-ChooseWood.propTypes = {
+AvailableWood.propTypes = {
   selector: PropTypes.bool,
 }
 
-ChooseWood.defaultProps = {
+AvailableWood.defaultProps = {
   selector: true,
 }
 
-export default ChooseWood
+export default AvailableWood

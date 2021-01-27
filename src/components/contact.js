@@ -2,7 +2,7 @@ import React from "react"
 import Swelltext from "./swelltext"
 
 const Contact = () => (
-  <div className="container mx-auto text-center">
+  <div className="container mx-auto text-center mt-8">
     <span>Icon</span>
     <Swelltext
       subheadline="contac us lorem ipsum"
