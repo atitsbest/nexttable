@@ -10,14 +10,14 @@ var { sendMail } = require("./sendmail")
 // declare a new express app
 var app = express()
 
-// Use JSON parser for all non-webhook routes
-app.use((req, res, next) => {
-  if (req.originalUrl === "/webhook") {
-    next()
-  } else {
-    bodyParser.json()(req, res, next)
-  }
-})
+// Add raw body to req params for Stripe signature check
+app.use(
+  bodyParser.json({
+    verify: function (req, res, buf) {
+      req.rawBody = buf.toString()
+    },
+  })
+)
 app.use(awsServerlessExpressMiddleware.eventContext())
 
 // Enable CORS for all methods
@@ -33,7 +33,7 @@ app.post("/webhook", async function (req, res) {
   try {
     // Check Stripe signature
     const sig = req.headers["stripe-signature"]
-    event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret)
+    event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret)
   } catch (err) {
     console.error("Contructing Event Error", err.message, err)
     return res.status(400).send(`Webhook Error: ${err.message}`)
