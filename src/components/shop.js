@@ -8,9 +8,10 @@ import * as Yup from "yup"
 import { loadStripe } from "@stripe/stripe-js"
 import { withPrefix } from "gatsby"
 import { API } from "aws-amplify"
+import { v4 as uuidv4 } from "uuid"
 
 const stripePromise = loadStripe(
-  "pk_test_51I8VeODSHHp1KdQDoWy3FciatXXbpbfKaxVX0EHX2gs5TBhKz4w65iSMEIf3b0u63QIVhwVpcpmOLWoQVAl8qSCJ00Yd90NVKL"
+  "pk_test_51IEg9pAk2f4BlUnVOqNgA7vwgVbgOk2SJe4u7xMe7Z8QBckUa9HuUoEL5ZHytLdtAWka5ZAVmjrhRdKXNv7swNhs00vSGQD47r"
 )
 
 const sizes = [
@@ -69,7 +70,7 @@ const Shop = () => {
       const apiEndpoint = "/checkout"
       const body = {
         quantity: 1,
-        client_reference_id: "UniqueString",
+        client_reference_id: uuidv4(),
         dimension: `${sizes[size].length} x ${sizes[size].width}`,
         price: sizes[size].price * 100, // in cents
         wood: woods[wood].name,
