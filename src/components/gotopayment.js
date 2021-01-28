@@ -1,71 +1,23 @@
 import React from "react"
-import { withPrefix } from "gatsby"
-import { API } from "aws-amplify"
-import { loadStripe } from "@stripe/stripe-js"
 
-const stripePromise = loadStripe(
-  "pk_test_51I8VeODSHHp1KdQDoWy3FciatXXbpbfKaxVX0EHX2gs5TBhKz4w65iSMEIf3b0u63QIVhwVpcpmOLWoQVAl8qSCJ00Yd90NVKL"
-)
-
-function GotoPayment({ enabled, size, wood }) {
-  const [redirecting, setRedirecting] = React.useState(false)
-
-  const redirectToCheckout = async () => {
-    setRedirecting(true)
-    try {
-      const fetchSession = async () => {
-        const apiName = "stripeAPI"
-        const apiEndpoint = "/checkout"
-        const body = {
-          quantity: 1,
-          client_reference_id: "UniqueString",
-          dimension: `${size.length} x ${size.width}`,
-          price: size.price * 100, // in cents
-          wood: wood.name,
-          imageUrl: `${window.location.origin}${withPrefix(
-            `/products/${wood.image}_${size.length}.png`
-          )}`,
-          email: "test@test.test",
-          street: "Adresse 1",
-          city: "Stadt",
-          zip: "1234",
-          country: "Österreich",
-        }
-        const session = await API.post(apiName, apiEndpoint, { body })
-        return session
-      }
-
-      const session = await fetchSession()
-      if (session.statusCode != null && session.statusCode !== 200) {
-        alert(
-          "Ups, da ist uns ein Fehler passiert. Wir kümmern uns gleich darum."
-        )
-      } else {
-        const sessionId = session.id
-        const stripe = await stripePromise
-        stripe.redirectToCheckout({ sessionId })
-      }
-    } finally {
-      setRedirecting(false)
-    }
-  }
-
+function GotoPayment({ enabled, loading, onClick }) {
   return (
     <div className="container mx-auto mt-10 flex flex-col items-center">
       <button
+        type="submit"
         className={`text-xl uppercase border-2 border-black p-2 pl-8 pr-8 
          flex items-center ${
            enabled
              ? "cursor-pointer hover:text-white hover:bg-black"
              : "cursor-not-allowed"
          }
-        ${redirecting ? "bg-black text-gray-200" : ""}
+        ${loading ? "bg-black text-gray-200" : ""}
          `}
         style={{ fontFamily: "Benton Sans Medium", opacity: enabled ? 1 : 0.5 }}
-        onClick={() => (enabled && !redirecting ? redirectToCheckout() : null)}
+        onClick={() => (enabled && !loading ? onClick() : null)}
         disabled={!enabled}
       >
-        {redirecting && <Spinner />} <span>Zur Zahlung...</span>
+        {loading && <Spinner />} <span>Zur Zahlung...</span>
       </button>
     </div>
   )

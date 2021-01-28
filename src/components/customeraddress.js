@@ -1,6 +1,6 @@
 import React from "react"
 
-function CustomerAddress() {
+function CustomerAddress(props) {
   const inputClasses =
     "mt-1 block w-full bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
   const labelClasses = "block w-full mt-2"
@@ -14,29 +14,24 @@ function CustomerAddress() {
         Lieferadresse
       </h2>
       <div className="flex flex-col items-center my-8 mx-2">
-        <label className={labelClasses}>
-          <span className="text-gray-700">E-Mail-Adresse</span>
-          <input
-            type="email"
-            class={inputClasses}
-            placeholder="otto@beispiel.me"
-          />
-        </label>
-        <label className={labelClasses}>
-          <span className="text-gray-700">Straße</span>
-          <input type="text" class={inputClasses} placeholder="" />
-        </label>
-        <label className={labelClasses}>
-          <span className="text-gray-700">PLZ</span>
-          <input type="text" class={inputClasses} placeholder="" />
-        </label>
-        <label className={labelClasses}>
-          <span className="text-gray-700">Stadt</span>
-          <input type="text" class={inputClasses} placeholder="" />
-        </label>
+        <Input
+          label="E-Mail-Adresse"
+          name="email"
+          type="email"
+          placeholder="jo@nexttable.at"
+          {...props}
+        />
+        <Input label="Straße" name="street" {...props} />
+        <Input label="PLZ" name="zip" {...props} />
+        <Input label="Stadt" name="city" {...props} />
         <label className={labelClasses}>
           <span className="text-gray-700">Land</span>
-          <select class={inputClasses}>
+          <select
+            name="country"
+            class={inputClasses}
+            value={props.values.country}
+            onChange={props.handleChange}
+          >
             <option>Österreich</option>
             <option>Deutschland</option>
             <option>Schweiz</option>
@@ -44,6 +39,36 @@ function CustomerAddress() {
         </label>
       </div>
     </div>
+  )
+}
+
+function Input({
+  label,
+  name,
+  type,
+  placeholder,
+  errors,
+  handleChange,
+  values,
+}) {
+  const inputClasses =
+    "mt-1 block w-full bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+  const labelClasses = "block w-full mt-2"
+  return (
+    <label className={`${labelClasses} ${errors[name] ? "text-red-500" : ""}`}>
+      <span className="text-gray-700">{label}</span>
+      <input
+        name={name}
+        type={type || "text"}
+        class={`${inputClasses} ${errors[name] ? "bg-red-200" : ""}`}
+        placeholder={placeholder}
+        value={values[name]}
+        onChange={handleChange}
+      />
+      {errors[name] && (
+        <span className="text-sm text-red-500">{errors[name]}</span>
+      )}
+    </label>
   )
 }
 
