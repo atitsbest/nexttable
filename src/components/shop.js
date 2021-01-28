@@ -10,7 +10,7 @@ import { withPrefix } from "gatsby"
 import { API } from "aws-amplify"
 
 const stripePromise = loadStripe(
-  "pk_test_51I8VeODSHHp1KdQDoWy3FciatXXbpbfKaxVX0EHX2gs5TBhKz4w65iSMEIf3b0u63QIVhwVpcpmOLWoQVAl8qSCJ00Yd90NVKL"
+  "pk_test_51IEg9pAk2f4BlUnVOqNgA7vwgVbgOk2SJe4u7xMe7Z8QBckUa9HuUoEL5ZHytLdtAWka5ZAVmjrhRdKXNv7swNhs00vSGQD47r"
 )
 
 const sizes = [
