@@ -24,10 +24,10 @@ function Subheader({ siteTitle }) {
           </Link>
         </li>
         <li className="mr-4">
-          <img src={love} width="16" />
+          <img src={love} width="16" alt="Show your love" />
         </li>
-        <li>
-          <img src={contact} width="16" />
+        <li className="mr-4">
+          <img src={contact} width="16" alt="Kontakt" />
         </li>
       </ul>
     </div>

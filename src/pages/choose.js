@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { withPrefix, Link } from "gatsby"
+import Helmet from "react-helmet"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,6 +18,11 @@ import Fulfillment from "../components/fulfillment"
 
 const SecondPage = () => (
   <Layout>
+    <Helmet>
+      <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script src={withPrefix("choose-script.js")} type="text/javascript" />
+    </Helmet>
     <SEO title="Choose" />
     <Hero
       text="Choose your size"

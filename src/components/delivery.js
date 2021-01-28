@@ -6,7 +6,7 @@ function Delivery() {
     <div className="container mx-auto">
       <div className="flex flex-row">
         <div className="">
-          <img src={icon} width="32" />
+          <img src={icon} width="32" alt="Lieferbedinugen" />
         </div>
         <div className="w-3/6 text-sm ml-4 mr-2">
           <strong style={{ fontFamily: "Benton Sans Medium" }}>

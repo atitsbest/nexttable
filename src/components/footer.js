@@ -31,10 +31,20 @@ const Footer = () => (
             Shop
           </Link>
           <Link to="/" className="mx-auto">
-            <img src={love} width="16" style={{ opacity: 0.7 }} />
+            <img
+              src={love}
+              width="16"
+              style={{ opacity: 0.7 }}
+              alt="Show your love"
+            />
           </Link>
           <Link to="/" className="mx-auto">
-            <img src={contact} width="16" style={{ opacity: 0.7 }} />
+            <img
+              src={contact}
+              width="16"
+              style={{ opacity: 0.7 }}
+              alt="Kontakt"
+            />
           </Link>
         </div>
       </div>

@@ -2,7 +2,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 
 const ChooseWood = ({ selector }) => {
   const data = useStaticQuery(graphql`
@@ -32,7 +31,7 @@ const ChooseWood = ({ selector }) => {
   `)
 
   return (
-    <div class="max-w bg-gray-100 pt-4 pb-8 mt-8">
+    <div className="max-w bg-gray-100 pt-4 pb-8 mt-8">
       <div className="container mx-auto">
         <h2
           className="text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline"

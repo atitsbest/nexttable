@@ -20,22 +20,6 @@ const Explosion = () => {
     return <div>Picture not found</div>
   }
 
-  const style = {
-    half: {
-      flex: "1 1 50%",
-      alignItems: "center",
-    },
-    li: {
-      borderBottom: "1px solid #999",
-      display: "flex",
-      flexDirection: "column",
-    },
-    strong: {
-      fontFamily: "Benton Sans Medium",
-      fontWeight: 400,
-    },
-  }
-
   return (
     <div className="container mx-auto mt-8">
       <div className="relative">
