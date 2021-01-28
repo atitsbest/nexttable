@@ -30,7 +30,6 @@ const Shop = () => {
   const [wood, setWood] = React.useState()
 
   const [canGotoPayment, setCanGotoPayment] = React.useState(false)
-  const [redirecting, setRedirecting] = React.useState(false)
 
   const formik = useFormik({
     initialValues: {
@@ -48,54 +47,55 @@ const Shop = () => {
       zip: Yup.string().required("Bitte ausfüllen"),
       city: Yup.string().required("Bitte ausfüllen"),
     }),
+    onSubmit: (values, { setSubmitting }) => {
+      setSubmitting(true)
+      try {
+        redirectToCheckout()
+      } catch {
+        setSubmitting(false)
+      }
+    },
   })
 
   React.useEffect(() => {
-    setCanGotoPayment(size != null && wood != null)
+    setCanGotoPayment(
+      size != null && wood != null && formik.isValid && formik.touched
+    )
   }, [size, wood])
 
   const redirectToCheckout = async () => {
-    setRedirecting(true)
-    try {
-      const fetchSession = async () => {
-        const apiName = "stripeAPI"
-        const apiEndpoint = "/checkout"
-        const body = {
-          quantity: 1,
-          client_reference_id: "UniqueString",
-          dimension: `${sizes[size].length} x ${sizes[size].width}`,
-          price: sizes[size].price * 100, // in cents
-          wood: woods[wood].name,
-          imageUrl: `${window.location.origin}${withPrefix(
-            `/products/${woods[wood].image}_${sizes[size].length}.png`
-          )}`,
-          email: formik.values.email,
-          street: formik.values.street,
-          city: formik.values.city,
-          zip: formik.values.zip,
-          country: formik.values.country,
-        }
-        const session = await API.post(apiName, apiEndpoint, { body })
-        return session
+    const fetchSession = async () => {
+      const apiName = "stripeAPI"
+      const apiEndpoint = "/checkout"
+      const body = {
+        quantity: 1,
+        client_reference_id: "UniqueString",
+        dimension: `${sizes[size].length} x ${sizes[size].width}`,
+        price: sizes[size].price * 100, // in cents
+        wood: woods[wood].name,
+        imageUrl: `${window.location.origin}${withPrefix(
+          `/products/${woods[wood].image}_${sizes[size].length}.png`
+        )}`,
+        email: formik.values.email,
+        street: formik.values.street,
+        city: formik.values.city,
+        zip: formik.values.zip,
+        country: formik.values.country,
       }
-
-      const session = await fetchSession()
-      if (session.statusCode != null && session.statusCode !== 200) {
-        alert(
-          "Ups, da ist uns ein Fehler passiert. Wir kümmern uns gleich darum."
-        )
-      } else {
-        const sessionId = session.id
-        const stripe = await stripePromise
-        stripe.redirectToCheckout({ sessionId })
-      }
-    } finally {
-      setRedirecting(false)
+      const session = await API.post(apiName, apiEndpoint, { body })
+      return session
     }
-  }
 
-  function handleGotoPaymentClick() {
-    redirectToCheckout()
+    const session = await fetchSession()
+    if (session.statusCode != null && session.statusCode !== 200) {
+      alert(
+        "Ups, da ist uns ein Fehler passiert. Wir kümmern uns gleich darum."
+      )
+    } else {
+      const sessionId = session.id
+      const stripe = await stripePromise
+      stripe.redirectToCheckout({ sessionId })
+    }
   }
 
   return (
@@ -105,11 +105,7 @@ const Shop = () => {
       <ChooseWood woods={woods} value={wood} onChange={setWood} />
       <form onSubmit={formik.handleSubmit}>
         <CustomerAddress {...formik} />
-        <GotoPayment
-          enabled={canGotoPayment && formik.isValid}
-          loading={redirecting}
-          onClick={handleGotoPaymentClick}
-        />
+        <GotoPayment enabled={canGotoPayment} loading={formik.isSubmitting} />
       </form>
     </>
   )

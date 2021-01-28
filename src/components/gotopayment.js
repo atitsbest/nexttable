@@ -1,6 +1,6 @@
 import React from "react"
 
-function GotoPayment({ enabled, loading, onClick }) {
+function GotoPayment({ enabled, loading }) {
   return (
     <div className="container mx-auto mt-10 flex flex-col items-center">
       <button
@@ -14,10 +14,12 @@ function GotoPayment({ enabled, loading, onClick }) {
         ${loading ? "bg-black text-gray-200" : ""}
          `}
         style={{ fontFamily: "Benton Sans Medium", opacity: enabled ? 1 : 0.5 }}
-        onClick={() => (enabled && !loading ? onClick() : null)}
         disabled={!enabled}
       >
-        {loading && <Spinner />} <span>Zur Zahlung...</span>
+        {loading && <Spinner />}&nbsp;
+        <span className={`${loading ? "text-gray-400" : ""}`}>
+          Zur Zahlung...
+        </span>
       </button>
     </div>
   )
