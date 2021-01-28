@@ -6,7 +6,7 @@ const awsmobile = {
     "aws_cloud_logic_custom": [
         {
             "name": "stripeAPI",
-            "endpoint": "https://gvvnyqnrnd.execute-api.eu-central-1.amazonaws.com/staging",
+            "endpoint": "https://sdchukakv6.execute-api.eu-central-1.amazonaws.com/main",
             "region": "eu-central-1"
         }
     ]

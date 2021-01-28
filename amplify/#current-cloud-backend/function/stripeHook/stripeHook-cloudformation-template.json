@@ -68,8 +68,8 @@
         "Layers": [],
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-amplify316aa7414dc74-staging-75722-deployment",
-          "S3Key": "amplify-builds/stripeHook-314e544c6f5330545044-build.zip"
+          "S3Bucket": "amplify-nexttable-main-193324-deployment",
+          "S3Key": "amplify-builds/stripeHook-736e517854593672446d-build.zip"
         }
       }
     },

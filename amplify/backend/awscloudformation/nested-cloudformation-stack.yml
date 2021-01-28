@@ -71,25 +71,25 @@
     "functionstripeCheckout": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify316aa7414dc74-staging-75722-deployment/amplify-cfn-templates/function/stripeCheckout-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-nexttable-main-193324-deployment/amplify-cfn-templates/function/stripeCheckout-cloudformation-template.json",
         "Parameters": {
-          "env": "staging"
+          "env": "main"
         }
       }
     },
     "functionstripeHook": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify316aa7414dc74-staging-75722-deployment/amplify-cfn-templates/function/stripeHook-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-nexttable-main-193324-deployment/amplify-cfn-templates/function/stripeHook-cloudformation-template.json",
         "Parameters": {
-          "env": "staging"
+          "env": "main"
         }
       }
     },
     "apistripeAPI": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify316aa7414dc74-staging-75722-deployment/amplify-cfn-templates/api/stripeAPI-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-nexttable-main-193324-deployment/amplify-cfn-templates/api/stripeAPI-cloudformation-template.json",
         "Parameters": {
           "authRoleName": {
             "Ref": "AuthRoleName"
@@ -121,7 +121,7 @@
               "Outputs.Arn"
             ]
           },
-          "env": "staging"
+          "env": "main"
         }
       }
     }
