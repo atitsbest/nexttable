@@ -10,14 +10,14 @@ var { sendMail } = require("./sendmail")
 // declare a new express app
 var app = express()
 
-// Add raw body to req params for Stripe signature check
-app.use(
-  bodyParser.json({
-    verify: function (req, res, buf) {
-      req.rawBody = buf.toString()
-    },
-  })
-)
+// Use JSON parser for all non-webhook routes
+app.use((req, res, next) => {
+  if (req.originalUrl === "/webhook") {
+    next()
+  } else {
+    bodyParser.json()(req, res, next)
+  }
+})
 app.use(awsServerlessExpressMiddleware.eventContext())
 
 // Enable CORS for all methods
@@ -29,27 +29,28 @@ app.use(function (req, res, next) {
 
 app.post("/webhook", async function (req, res) {
   console.log("Webhook called")
-  // Check Stripe signature
   let event
   try {
+    // Check Stripe signature
     const sig = req.headers["stripe-signature"]
-    event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret)
-    console.log("Webhook data", event)
+    event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret)
   } catch (err) {
+    console.error("Contructing Event Error", err.message, err)
     return res.status(400).send(`Webhook Error: ${err.message}`)
   }
+  console.log("Hook error 3")
 
   switch (event.type) {
     case "checkout.session.completed":
       console.log(
         `Payment checkout session for ${req.body.data.object.client_reference_id} was successful!`
       )
-      /*sendMail({
-        to: "",
+      sendMail({
+        to: "atitsbest.shopping@gmail.com",
         subject: "NextTable - Zahlung erhalten",
         body:
           "+++ TEST this is a test and not real. ignore this email!. TEST +++\r\n\r\nVielen Danke, dass Sie sich für NextTable entschieden haben. Wir haben Ihre Zahlung erhalten.",
-      })*/
+      })
 
       break
     default:
