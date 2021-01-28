@@ -40,7 +40,7 @@ const ChooseWood = ({ woods, value, onChange }) => {
           Holz wählen
         </h2>
         <ul
-          className={`flex justify-around grid sm:grid-cols-${woods.length} gap-4`}
+          className={`flex justify-around sm:grid grid-cols-${woods.length} gap-4`}
           style={{
             margin: 0,
             padding: 0,

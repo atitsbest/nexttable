@@ -11,7 +11,7 @@ function ChooseSize({ sizes, value, onChange }) {
         <small className="mr-2 font-mono text-gray-500">1.</small>
         Größe wählen
       </h2>
-      <div className={`grid sm:grid-cols-${sizes.length || 3} gap-4`}>
+      <div className={`sm:grid grid-cols-${sizes.length || 3} gap-4`}>
         {sizes.map((s, idx) => (
           <Item
             key={idx}
