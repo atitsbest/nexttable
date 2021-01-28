@@ -8,7 +8,6 @@ const stripePromise = loadStripe(
 )
 
 function GotoPayment({ enabled, size, wood }) {
-  window.console.log(size, wood)
   const redirectToCheckout = async () => {
     const fetchSession = async () => {
       const apiName = "stripeAPI"
