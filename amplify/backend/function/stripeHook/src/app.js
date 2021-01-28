@@ -42,18 +42,21 @@ app.post("/webhook", async function (req, res) {
   switch (event.type) {
     case "checkout.session.completed":
       console.log(
-        `Payment checkout session for ${req.body.data.object.client_reference_id} was successful!`
+        `Payment checkout session for ${req.body.data.object.id} was successful!`,
+        req.body.data
       )
       try {
         console.log("sending mail...")
-        sendMail({
-          to: "atitsbest.shopping@gmail.com",
-          subject: "NextTable - Zahlung erhalten",
-          body:
-            "+++ TEST this is a test and not real. ignore this email!. TEST +++\r\n\r\nVielen Danke, dass Sie sich für NextTable entschieden haben. Wir haben Ihre Zahlung erhalten.",
+        await sendMail({
+          to: req.body.data.object.customer_email,
+          subject: `NextTable - Zahlung für erhalten`,
+          body: `+++ TEST this is a test and not real. ignore this email!. TEST +++\r\n\r\nVielen Danke, dass Sie sich für NextTable entschieden haben. Wir haben Ihre Zahlung erhalten.\r\nLieferung erfolg nach ${JSON.stringify(
+            req.body.data.object.metadata
+          )}.`,
         })
       } catch (err) {
         console.error("Faild to send mail.", err)
+        return res.status(400).end()
       }
 
       break
