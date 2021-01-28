@@ -28,11 +28,13 @@ app.use(function (req, res, next) {
 })
 
 app.post("/webhook", async function (req, res) {
+  console.log("Webhook called")
   // Check Stripe signature
   const sig = req.headers["stripe-signature"]
   let event
   try {
     event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret)
+    console.log("Webhook data", event)
   } catch (err) {
     return res.status(400).send(`Webhook Error: ${err.message}`)
   }
@@ -42,12 +44,12 @@ app.post("/webhook", async function (req, res) {
       console.log(
         `Payment checkout session for ${req.body.data.object.client_reference_id} was successful!`
       )
-      sendMail({
+      /*sendMail({
         to: "",
         subject: "NextTable - Zahlung erhalten",
         body:
           "+++ TEST this is a test and not real. ignore this email!. TEST +++\r\n\r\nVielen Danke, dass Sie sich für NextTable entschieden haben. Wir haben Ihre Zahlung erhalten.",
-      })
+      })*/
 
       break
     default:

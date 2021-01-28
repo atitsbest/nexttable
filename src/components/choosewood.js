@@ -40,7 +40,7 @@ const ChooseWood = ({ woods, value, onChange }) => {
           Holz wählen
         </h2>
         <ul
-          className={`flex justify-around grid grid-cols-${woods.length} gap-4`}
+          className={`flex justify-around grid sm:grid-cols-${woods.length} gap-4`}
           style={{
             margin: 0,
             padding: 0,
@@ -65,7 +65,7 @@ const ChooseWood = ({ woods, value, onChange }) => {
 function Item({ image, text, selected, onSelectionChange }) {
   return (
     <li
-      className={`flex flex-col text-center cursor-pointer pb-4 rounded-sm ${
+      className={`flex flex-col text-center cursor-pointer pb-4 pl-2 pr-2 sm:pl-0 sm:pr-0 rounded-sm ${
         selected ? "bg-black text-white" : "hover:bg-gray-200"
       }`}
       onClick={onSelectionChange}

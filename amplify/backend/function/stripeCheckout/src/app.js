@@ -22,6 +22,13 @@ app.post("/checkout", async function (req, res) {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       customer_email: req.body.email,
+      metadata: {
+        city: req.body.city,
+        country: req.body.country,
+        line1: req.body.street,
+        postal_code: req.body.zip,
+        email: req.body.email,
+      },
       line_items: [
         {
           price_data: {
@@ -35,12 +42,6 @@ app.post("/checkout", async function (req, res) {
           quantity: 1,
         },
       ],
-      metadata: {
-        street: req.body.street,
-        city: req.body.city,
-        zip: req.body.zip,
-        country: req.body.country,
-      },
       mode: "payment",
       success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`, // The URL the customer will be directed to after the payment or subscription creation is successful.
       cancel_url: `${baseUrl}/choose`, // The URL the customer will be directed to if they decide to cancel payment and return to your website.
