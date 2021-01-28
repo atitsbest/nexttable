@@ -15,9 +15,9 @@ const stripePromise = loadStripe(
 )
 
 const sizes = [
-  { length: 180, width: 120, price: 13 },
-  { length: 220, width: 120, price: 14 },
-  { length: 250, width: 120, price: 16 },
+  { length: 180, width: 120, price: 13200 },
+  { length: 220, width: 120, price: 13600 },
+  { length: 250, width: 120, price: 13900 },
 ]
 
 const woods = [
@@ -101,9 +101,7 @@ const Shop = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-mono">
-        +++DAS IST EIN TEST, NICHT BENUTZEN+++
-      </h1>
+      <h1 className="text-3xl font-mono"></h1>
       <ChooseSize sizes={sizes} value={size} onChange={setSize} />
       <ChooseWood woods={woods} value={wood} onChange={setWood} />
       <form onSubmit={formik.handleSubmit}>
