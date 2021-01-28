@@ -17,14 +17,14 @@ function sendMail({ to, subject, body }) {
     Source: "joachim.jungreithmayr@gmail.com",
   }
 
-  ses.sendEmail(params, function (err, data) {
-    callback(null, { err: err, data: data })
-    if (err) {
-      console.log(err)
-    } else {
-      console.log(data)
-    }
-  })
+  var sendPromise = ses.sendEmail(params).promise()
+  sendPromise
+    .then(function (data) {
+      console.log(data.MessageId)
+    })
+    .catch(function (err) {
+      console.error(err, err.stack)
+    })
 }
 
 module.exports = {
