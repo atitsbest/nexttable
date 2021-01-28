@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-function ChooseSize() {
+function ChooseSize({ sizes, value, onChange }) {
   return (
     <div className="container mx-auto mt-12">
       <h2
@@ -11,10 +11,16 @@ function ChooseSize() {
         <small className="mr-2 font-mono text-gray-500">1.</small>
         Größe wählen
       </h2>
-      <div className="grid sm:grid-cols-3 gap-4">
-        <Item dimension="180 x 120" price="€ 13.900" />
-        <Item dimension="220 x 120" price="€ 14.900" />
-        <Item dimension="250 x 120" price="€ 16.900" />
+      <div className={`grid sm:grid-cols-${sizes.length} gap-4`}>
+        {sizes.map((s, idx) => (
+          <Item
+            key={idx}
+            dimension={`${s.length} x ${s.width}`}
+            price={`€ ${parseInt(s.price / 1000)}.${s.price % 1000}`}
+            selected={value === idx}
+            onSelectionChange={() => onChange(idx)}
+          />
+        ))}
       </div>
       <p
         className="mt-8 text-center"
@@ -26,11 +32,17 @@ function ChooseSize() {
   )
 }
 
-function Item({ dimension, price }) {
+function Item({ dimension, price, selected, onSelectionChange }) {
   return (
-    <div className="flex flex-col items-center cursor-pointer">
+    <div
+      className="flex flex-col items-center cursor-pointer"
+      onClick={onSelectionChange}
+      role="button"
+    >
       <div
-        className="border text-center p-1 pl-8 pr-8 border-black hover:text-white hover:bg-black"
+        className={`border text-center p-1 pl-8 pr-8 border-black  ${
+          selected ? "text-white bg-black" : "hover:bg-gray-100"
+        }`}
         style={{ fontFamily: "Benton Sans Medium" }}
       >
         {dimension}

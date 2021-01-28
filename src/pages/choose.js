@@ -1,6 +1,5 @@
 import React from "react"
-import { withPrefix, Link } from "gatsby"
-import Helmet from "react-helmet"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,28 +8,19 @@ import Contact from "../components/contact"
 import Divider from "../components/divider"
 import HappyLady from "../components/happylady"
 import Hero from "../components/hero"
-import ChooseSize from "../components/choosesize"
-import ChooseWood from "../components/choosewood"
-import GotoPayment from "../components/gotopayment"
+import Shop from "../components/shop"
 import Delivery from "../components/delivery"
 import Ensurace from "../components/ensurance"
 import Fulfillment from "../components/fulfillment"
 
 const SecondPage = () => (
   <Layout>
-    <Helmet>
-      <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script src={withPrefix("choose-script.js")} type="text/javascript" />
-    </Helmet>
     <SEO title="Choose" />
     <Hero
-      text="Choose your size"
+      text="Choose your table"
       subtitle="Next Level - Next Table - Next Design. Stilvolles Wohnen mit x"
     />
-    <ChooseSize />
-    <ChooseWood />
-    <GotoPayment />
+    <Shop />
     <br />
     <Divider />
     <Delivery />

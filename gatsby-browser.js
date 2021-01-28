@@ -6,3 +6,8 @@
 
 // You can delete this file if you're not using it
 import "./src/styles/global.css"
+
+import "@stripe/stripe-js"
+import Amplify from "aws-amplify"
+import awsconfig from "./src/aws-exports"
+Amplify.configure(awsconfig)

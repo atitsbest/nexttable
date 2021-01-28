@@ -1,9 +1,8 @@
-import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const ChooseWood = ({ selector }) => {
+const ChooseWood = ({ woods, value, onChange }) => {
   const data = useStaticQuery(graphql`
     query {
       appleImage: file(relativePath: { eq: "choose_apple.png" }) {
@@ -31,7 +30,7 @@ const ChooseWood = ({ selector }) => {
   `)
 
   return (
-    <div className="max-w bg-gray-100 pt-4 pb-8 mt-8">
+    <div className="max-w bg-gray-100 pt-4 pb-4 mt-8">
       <div className="container mx-auto">
         <h2
           className="text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline"
@@ -41,36 +40,41 @@ const ChooseWood = ({ selector }) => {
           Holz wählen
         </h2>
         <ul
-          className="flex justify-around grid grid-cols-3 gap-4"
+          className={`flex justify-around grid grid-cols-${woods.length} gap-4`}
           style={{
             margin: 0,
             padding: 0,
             listStyleType: "none",
           }}
         >
-          <li className="flex flex-col text-center cursor-pointer">
-            <Img fluid={data.appleImage.childImageSharp.fluid} />
-            <strong className="mt-1">Apfelbaum</strong>
-          </li>
-          <li className="flex flex-col text-center cursor-pointer">
-            <Img fluid={data.nutImage.childImageSharp.fluid} />
-            <strong className="mt-1">Nussbaum</strong>
-          </li>
-          <li className="flex flex-col text-center cursor-pointer hover:border-2 hover:border-black">
-            <Img fluid={data.mapleImage.childImageSharp.fluid} />
-            <strong className="mt-1">Ahorn</strong>
-          </li>
+          {woods.map((w, idx) => (
+            <Item
+              key={idx}
+              image={data[`${w.image}Image`].childImageSharp.fluid}
+              text={w.name}
+              selected={value === idx}
+              onSelectionChange={() => onChange(idx)}
+            />
+          ))}
         </ul>
       </div>
     </div>
   )
 }
-ChooseWood.propTypes = {
-  selector: PropTypes.bool,
-}
 
-ChooseWood.defaultProps = {
-  selector: true,
+function Item({ image, text, selected, onSelectionChange }) {
+  return (
+    <li
+      className={`flex flex-col text-center cursor-pointer pb-4 rounded-sm ${
+        selected ? "bg-black text-white" : "hover:bg-gray-200"
+      }`}
+      onClick={onSelectionChange}
+      role="button"
+    >
+      <Img fluid={image} />
+      <strong className="mt-1">{text}</strong>
+    </li>
+  )
 }
 
 export default ChooseWood
