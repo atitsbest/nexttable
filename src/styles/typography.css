@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Benton Sans Light";
+  src: url("../fonts/Benton\ Sans\ Light.otf");
+}
+
+@font-face {
+  font-family: "Benton Sans Black";
+  src: url("../fonts/Benton\ Sans\ Black.otf");
+}
+
+@font-face {
+  font-family: "Benton Sans Book Italic";
+  src: url("../fonts/Benton\ Sans\ Book Italic.otf");
+}
+
+@font-face {
+  font-family: "Benton Sans Medium";
+  src: url("../fonts/Benton\ Sans\ Medium.otf");
+}

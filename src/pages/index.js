@@ -1,21 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Hero from "../components/hero"
+import Gotoshop from "../components/gotoshop"
+import Explosion from "../components/explosion"
+import Divider from "../components/divider"
+import Swelltext from "../components/swelltext"
+import TheJo from "../components/thejo"
+import AvailableWood from "../components/availablewood"
+import Contact from "../components/contact"
+import Megablah from "../components/megablah"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Hero text="NEXT LEVEL -	NEXT TABLE -NEXT DESIGN. STILVOLLES WOHNEN MIT X" />
+    <Gotoshop />
+    <Explosion />
+    <Divider />
+    <Swelltext text="Ein Tisch gibt einem Wohnraum ein Zentrum; ein Ort, der Treffpunkt und Mittelpunkt ist. Joachim Jungreithmayr hat Next Table genau dafür entwickelt : außergewöhnlich edel im Design, wegweisende Perfektion in der Herstellung. Höchste Ansprüche bis ins Detail." />
+    <TheJo />
+    <Swelltext
+      headline="Holzarten"
+      text="Next Table, das sind hochwertige Materialien, elegant und unaufdringlich kombiniert. Ein versierter Umgang mit Holz schafft ein neues Form- und Raumgefühl. Ein Tisch, mehr als ein Lebensgefühl."
+    />
+    <AvailableWood />
+    <Divider />
+    <Contact />
+    <Divider />
+    <Megablah />
   </Layout>
 )
 

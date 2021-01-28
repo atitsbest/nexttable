@@ -1,0 +1,17 @@
+.legal h1 {
+  font-size: 2rem;
+  font-family: "Benton Sans Medium";
+}
+
+.legal h3 {
+  font-size: 1.5rem;
+  font-family: "Benton Sans Medium";
+}
+
+.legal p {
+  margin: 16px 0;
+}
+
+.legal a {
+  color: blue;
+}
