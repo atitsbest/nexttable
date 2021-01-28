@@ -13,7 +13,7 @@ function CustomerAddress(props) {
         <small className="mr-2 font-mono text-gray-500">3.</small>
         Lieferadresse
       </h2>
-      <div className="flex flex-col items-center my-8 mx-2">
+      <div className="flex flex-col items-center my-8 mx-4">
         <Input
           label="E-Mail-Adresse"
           name="email"

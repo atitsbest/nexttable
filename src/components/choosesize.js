@@ -11,7 +11,7 @@ function ChooseSize({ sizes, value, onChange }) {
         <small className="mr-2 font-mono text-gray-500">1.</small>
         Größe wählen
       </h2>
-      <div className={`sm:grid grid-cols-${sizes.length || 3} gap-4`}>
+      <div className={`sm:grid sm:grid-cols-${sizes.length || 3} gap-4`}>
         {sizes.map((s, idx) => (
           <Item
             key={idx}
@@ -23,7 +23,7 @@ function ChooseSize({ sizes, value, onChange }) {
         ))}
       </div>
       <p
-        className="mt-8 text-center"
+        className="mt-4 text-center"
         style={{ fontFamily: "Benton Sans Medium" }}
       >
         Sonderwünsche möglich! Einfach melden.
@@ -36,7 +36,7 @@ function Item({ dimension, price, selected, onSelectionChange }) {
   return (
     // eslint-disable-next-line
     <div
-      className="flex flex-col items-center cursor-pointer"
+      className="flex flex-col items-center cursor-pointer mb-4"
       onClick={onSelectionChange}
       role="button"
     >
