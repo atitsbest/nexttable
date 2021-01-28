@@ -8,7 +8,7 @@ const Blahblah = ({ image, header, text }) => {
   }
 
   return (
-    <div className="flex justify-between gap-6 items-center">
+    <div className="flex justify-between gap-6 items-center mr-2">
       <div className="w-2/6">
         <Img fluid={{ ...image, aspectRatio: 1 / 1 }} />
       </div>

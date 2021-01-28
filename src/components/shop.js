@@ -2,6 +2,7 @@ import React from "react"
 import ChooseSize from "./choosesize"
 import ChooseWood from "./choosewood"
 import GotoPayment from "./gotopayment"
+import CustomerAddress from "./customeraddress"
 
 const sizes = [
   { length: 180, width: 120, price: 13900 },
@@ -29,6 +30,7 @@ const Shop = () => {
     <>
       <ChooseSize sizes={sizes} value={size} onChange={setSize} />
       <ChooseWood woods={woods} value={wood} onChange={setWood} />
+      <CustomerAddress />
       <GotoPayment
         enabled={canGotoPayment}
         size={size != null ? sizes[size] : null}

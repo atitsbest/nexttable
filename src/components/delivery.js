@@ -4,7 +4,7 @@ import icon from "../images/delivery.png"
 function Delivery() {
   return (
     <div className="container mx-auto">
-      <div className="flex flex-row">
+      <div className="flex flex-row mx-2">
         <div className="">
           <img src={icon} width="32" alt="Lieferbedinugen" />
         </div>

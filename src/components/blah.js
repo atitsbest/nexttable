@@ -8,7 +8,7 @@ const Blah = ({ image, header, text }) => {
   }
 
   return (
-    <div className="flex justify-between items-center gap-6">
+    <div className="flex justify-between items-center gap-6 mr-2">
       <div className="w-2/6">
         <Img fluid={{ ...image, aspectRatio: 25 / 9 }} />
       </div>

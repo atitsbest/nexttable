@@ -4,7 +4,7 @@ import icon from "../images/ensurance.png"
 function Ensurance() {
   return (
     <div className="container mx-auto">
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center mx-2">
         <div className="">
           <img src={icon} width="32" alt="Lieferversicherung" />
         </div>
