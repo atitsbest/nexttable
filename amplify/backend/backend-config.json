@@ -4,6 +4,11 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "stripeHook": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "api": {
@@ -14,6 +19,14 @@
         {
           "category": "function",
           "resourceName": "stripeCheckout",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "stripeHook",
           "attributes": [
             "Name",
             "Arn"

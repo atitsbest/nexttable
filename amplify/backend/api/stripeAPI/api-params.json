@@ -7,6 +7,13 @@
                 "open": true
             },
             "policyResourceName": "/checkout"
+        },
+        {
+            "name": "/webhook",
+            "lambdaFunction": "stripeHook",
+            "privacy": {
+                "open": true
+            }
         }
     ],
     "resourceName": "stripeAPI",
@@ -14,6 +21,9 @@
     "functionArns": [
         {
             "lambdaFunction": "stripeCheckout"
+        },
+        {
+            "lambdaFunction": "stripeHook"
         }
     ],
     "privacy": {
@@ -30,6 +40,15 @@
                 "Name",
                 "Arn"
             ]
+        },
+        {
+            "category": "function",
+            "resourceName": "stripeHook",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
         }
-    ]
+    ],
+    "uuid": "eb5591c6"
 }
