@@ -17,41 +17,41 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2021-01-28T18:50:01.012Z",
-      "lastPackageTimeStamp": "2021-01-28T18:50:03.752Z",
-      "distZipFilename": "stripeCheckout-7356356d4d7335615a37-build.zip",
+      "lastBuildTimeStamp": "2021-01-28T20:31:00.139Z",
+      "lastPackageTimeStamp": "2021-01-28T20:31:02.447Z",
+      "distZipFilename": "stripeCheckout-5a445233426a35493439-build.zip",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-nexttable-main-193324-deployment/amplify-cfn-templates/function/stripeCheckout-cloudformation-template.json",
         "logicalId": "functionstripeCheckout"
       },
-      "lastPushTimeStamp": "2021-01-28T18:52:08.815Z",
+      "lastPushTimeStamp": "2021-01-28T20:32:08.012Z",
       "output": {
         "Region": "eu-central-1",
         "Arn": "arn:aws:lambda:eu-central-1:712214028113:function:stripeCheckout-main",
         "Name": "stripeCheckout-main",
         "LambdaExecutionRole": "nexttableLambdaRoled212762c-main"
       },
-      "lastPushDirHash": "LrgtN6XEe1QdrRuUXd6sxjPx6o0="
+      "lastPushDirHash": "jNwFXxWMdQStQrm96SNjWfR/RMg="
     },
     "stripeHook": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2021-01-28T18:50:01.029Z",
-      "lastPackageTimeStamp": "2021-01-28T18:50:03.793Z",
+      "lastBuildTimeStamp": "2021-01-28T20:31:00.154Z",
+      "lastPackageTimeStamp": "2021-01-28T20:31:02.483Z",
       "distZipFilename": "stripeHook-736e517854593672446d-build.zip",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-nexttable-main-193324-deployment/amplify-cfn-templates/function/stripeHook-cloudformation-template.json",
         "logicalId": "functionstripeHook"
       },
-      "lastPushTimeStamp": "2021-01-28T18:52:08.815Z",
+      "lastPushTimeStamp": "2021-01-28T20:32:08.012Z",
       "output": {
         "Region": "eu-central-1",
         "Arn": "arn:aws:lambda:eu-central-1:712214028113:function:stripeHook-main",
         "Name": "stripeHook-main",
         "LambdaExecutionRole": "nexttableLambdaRole055acc8a-main"
       },
-      "lastPushDirHash": "SJZCX4QU7ZfO/hTxCZuhYDtfkDM="
+      "lastPushDirHash": "MdNcJKCrb0IStCH41JMVvI5QF84="
     }
   },
   "api": {
@@ -80,7 +80,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-nexttable-main-193324-deployment/amplify-cfn-templates/api/stripeAPI-cloudformation-template.json",
         "logicalId": "apistripeAPI"
       },
-      "lastPushTimeStamp": "2021-01-28T18:52:08.815Z",
+      "lastPushTimeStamp": "2021-01-28T20:32:07.982Z",
       "output": {
         "ApiName": "stripeAPI",
         "RootUrl": "https://sdchukakv6.execute-api.eu-central-1.amazonaws.com/main",
