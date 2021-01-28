@@ -30,9 +30,9 @@ app.use(function (req, res, next) {
 app.post("/webhook", async function (req, res) {
   console.log("Webhook called")
   // Check Stripe signature
-  const sig = req.headers["stripe-signature"]
   let event
   try {
+    const sig = req.headers["stripe-signature"]
     event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret)
     console.log("Webhook data", event)
   } catch (err) {
