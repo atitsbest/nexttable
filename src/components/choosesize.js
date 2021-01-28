@@ -34,6 +34,7 @@ function ChooseSize({ sizes, value, onChange }) {
 
 function Item({ dimension, price, selected, onSelectionChange }) {
   return (
+    // eslint-disable-next-line
     <div
       className="flex flex-col items-center cursor-pointer"
       onClick={onSelectionChange}

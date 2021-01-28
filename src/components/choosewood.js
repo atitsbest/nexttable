@@ -64,12 +64,12 @@ const ChooseWood = ({ woods, value, onChange }) => {
 
 function Item({ image, text, selected, onSelectionChange }) {
   return (
+    // eslint-disable-next-line
     <li
       className={`flex flex-col text-center cursor-pointer pb-4 pl-2 pr-2 sm:pl-0 sm:pr-0 rounded-sm ${
         selected ? "bg-black text-white" : "hover:bg-gray-200"
       }`}
       onClick={onSelectionChange}
-      role="button"
     >
       <Img fluid={image} />
       <strong className="mt-1">{text}</strong>
