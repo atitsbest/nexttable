@@ -11,13 +11,13 @@ import { API } from "aws-amplify"
 import { v4 as uuidv4 } from "uuid"
 
 const stripePromise = loadStripe(
-  "pk_test_51IEg9pAk2f4BlUnVOqNgA7vwgVbgOk2SJe4u7xMe7Z8QBckUa9HuUoEL5ZHytLdtAWka5ZAVmjrhRdKXNv7swNhs00vSGQD47r"
+  "pk_live_51IEg9pAk2f4BlUnV1vjXv1apakeDVWVfCnvsEdRT7GZqsnWi7DMuUzR1Hk1YOKEzKcgFr0MzDB4HTegAmbz7J93300mB48Fyij"
 )
 
 const sizes = [
-  { length: 180, width: 120, price: 13900 },
-  { length: 220, width: 120, price: 14900 },
-  { length: 250, width: 120, price: 16900 },
+  { length: 180, width: 120, price: 13 },
+  { length: 220, width: 120, price: 14 },
+  { length: 250, width: 120, price: 16 },
 ]
 
 const woods = [
@@ -101,7 +101,9 @@ const Shop = () => {
 
   return (
     <>
-      <pre>{formik.isValid}</pre>
+      <h1 className="text-3xl font-mono">
+        +++DAS IST EIN TEST, NICHT BENUTZEN+++
+      </h1>
       <ChooseSize sizes={sizes} value={size} onChange={setSize} />
       <ChooseWood woods={woods} value={wood} onChange={setWood} />
       <form onSubmit={formik.handleSubmit}>
