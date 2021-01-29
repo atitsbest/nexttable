@@ -33,8 +33,6 @@ function CustomerAddress(props) {
             onChange={props.handleChange}
           >
             <option>Österreich</option>
-            <option>Deutschland</option>
-            <option>Schweiz</option>
           </select>
         </label>
       </div>
