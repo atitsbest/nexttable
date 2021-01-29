@@ -31,7 +31,7 @@ const TheJo = () => {
             einem Designstück zum Leben."
           </p>
           <strong className="text-sm">Joachim Jungreithmayr</strong>
-          <i className="text-sm">Designer</i>
+          <i className="text-sm">Architeckt mit einer Leidenschaft für Möbel</i>
         </div>
       </div>
     </div>

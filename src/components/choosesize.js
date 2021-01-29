@@ -26,7 +26,8 @@ function ChooseSize({ sizes, value, onChange }) {
         className="mt-4 text-center"
         style={{ fontFamily: "Benton Sans Medium" }}
       >
-        Sonderwünsche möglich! Einfach melden.
+        Wir erfüllen gerne ihre Sonderwünsche! Schreiben Sie uns einfach, und
+        wir treffen uns zu einem persönlichen Tischgespräch.
       </p>
     </div>
   )

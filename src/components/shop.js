@@ -21,8 +21,8 @@ const sizes = [
 ]
 
 const woods = [
-  { name: "Apfelbaum", image: "apple" },
-  { name: "Nussbaum", image: "nut" },
+  { name: "Apfel", image: "apple" },
+  { name: "Nuss", image: "nut" },
   { name: "Ahorn", image: "maple" },
 ]
 

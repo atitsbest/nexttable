@@ -72,7 +72,7 @@ function Item({ image, text, selected, onSelectionChange }) {
       onClick={onSelectionChange}
     >
       <Img fluid={image} />
-      <strong className="mt-1">{text}</strong>
+      <strong className="mt-1">NExT Table - {text}</strong>
     </li>
   )
 }

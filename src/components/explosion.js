@@ -35,12 +35,12 @@ const Explosion = () => {
           <div>
             <div className="ml-8 grid sm:grid-rows-3 sm:gap-8">
               <Item
-                headline="high-end Tischplattenaufbau"
-                text="Höchste Stabilität bei nur 5cm Dicke"
+                headline="High-end Tischplattenaufbau"
+                text="5cm an höchster Stabilität"
               />
               <Item
                 headline="Einzigartiges Design"
-                text="Skulptur, die alle(s) verbindet"
+                text="Ein Tisch, der alle(s) verbindet"
               />
               <Item headline="Natur pur" text="Keine versteckten Metallteile" />
             </div>
@@ -49,17 +49,17 @@ const Explosion = () => {
             <div className="mr-8 grid sm:grid-rows-3 sm:gap-8">
               <Item
                 headline="Höchste Handwerkskunst"
-                text="100% Handarbeit in Österreich"
+                text="100% österreichische Qualität"
                 right
               />
               <Item
                 headline="Fortlaufende Holzmaserung"
-                text="Detailverliebte Holzbearbeitung"
+                text="Perfekte Holzbearbeitung bis ins Detail"
                 right
               />
               <Item
                 headline="Faszinierende Fußlösung"
-                text="Beinfreiheit für alle"
+                text="Sitzkomfort mit Beinfreiheit für alle"
                 right
               />
             </div>
