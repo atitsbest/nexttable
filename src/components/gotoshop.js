@@ -7,7 +7,7 @@ const Gotoshop = ({ text }) => {
     <div className="container mx-auto mt-4 flex flex-col align-center max-w-md">
       <h1 className="text-xl text-center mb-8">
         High-end Design trifft Handwerk mit Perfektion. Das Ergebnis: ein
-        einzigartiger Tischzum Wohnen und Leben. Stilvolles Design fürperfekte
+        einzigartiger Tisch zum Wohnen und Leben. Stilvolles Design für perfekte
         Augenblicke.
       </h1>
       <Link className="button" to="/choose">

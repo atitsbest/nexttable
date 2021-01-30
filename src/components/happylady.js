@@ -7,7 +7,7 @@ const HappyLady = () => {
     query {
       placeholderImage: file(relativePath: { eq: "lady.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 960) {
+          fluid(maxWidth: 1400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -31,8 +31,8 @@ const HappyLady = () => {
             Menschen. NExT Table ist für mich der Tisch, der all das in sich
             vereint."
           </p>
-          <strong className="text-sm">Pamela Orange</strong>
-          <i className="text-sm">Architect</i>
+          <strong className="text-sm">Elisabeth Mayr Kern</strong>
+          <i className="text-sm">Kultur- und Kommunikationsexpertin</i>
         </div>
       </div>
     </div>

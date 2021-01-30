@@ -19,7 +19,7 @@ const IndexPage = () => (
     <Gotoshop />
     <Explosion />
     <Divider />
-    <Swelltext text="Ein Tisch gibt einem Wohnraum ein Zentrum; ein Ort, der Treffpunkt und Mittelpunkt ist. Joachim Jungreithmayr hat Next Table genau dafür entwickelt : außergewöhnlich edel im Design, wegweisende Perfektion in der Herstellung. Höchste Ansprüche bis ins Detail." />
+    <Swelltext text="Ein Tisch gibt einem Wohnraum ein Zentrum; ein Ort, der Treffpunkt und Mittelpunkt ist. Joachim Jungreithmayr hat Next Table genau dafür entwickelt: außergewöhnlich edel im Design, wegweisende Perfektion in der Herstellung. Höchste Ansprüche bis ins Detail." />
     <TheJo />
     <Swelltext
       headline="Holz - ein Gefühl fürs Leben"

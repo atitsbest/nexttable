@@ -7,7 +7,7 @@ const Contact = () => (
     <img src={icon} width="32" alt="Kontakt" />
     <Swelltext
       subheadline="Ein Tisch lädt ein zum Gespräch"
-      text="NExT Table hat viel zu erzählen. Sind Sie neugierig und haben noch Frage? Wir geben gerne Auskunft - bei einem Tischgespräch rund um den NExT Table."
+      text="NExT Table hat viel zu erzählen. Sind Sie neugierig und haben noch Fragen? Wir geben gerne Auskunft - bei einem Tischgespräch rund um den NExT Table."
     />
   </div>
 )
