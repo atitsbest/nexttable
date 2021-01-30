@@ -11,3 +11,7 @@ import "@stripe/stripe-js"
 import Amplify from "aws-amplify"
 import awsconfig from "./src/aws-exports"
 Amplify.configure(awsconfig)
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})

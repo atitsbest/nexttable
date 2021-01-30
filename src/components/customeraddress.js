@@ -28,7 +28,7 @@ function CustomerAddress(props) {
           <span className="text-gray-700">Land</span>
           <select
             name="country"
-            class={inputClasses}
+            className={inputClasses}
             value={props.values.country}
             onChange={props.handleChange}
           >
@@ -58,7 +58,7 @@ function Input({
       <input
         name={name}
         type={type || "text"}
-        class={`${inputClasses} ${errors[name] ? "bg-red-200" : ""}`}
+        className={`${inputClasses} ${errors[name] ? "bg-red-200" : ""}`}
         placeholder={placeholder}
         value={values[name]}
         onChange={handleChange}
