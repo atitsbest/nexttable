@@ -8,18 +8,19 @@ import * as Yup from "yup"
 import { loadStripe } from "@stripe/stripe-js"
 import { withPrefix } from "gatsby"
 import { API } from "aws-amplify"
+import { v4 as uuidv4 } from "uuid"
 
 const stripePromise = loadStripe(process.env.STRIPE_SECRET_KEY)
 
 const sizes = [
-  { length: 180, width: 120, price: 13900 },
-  { length: 220, width: 120, price: 14900 },
-  { length: 250, width: 120, price: 16900 },
+  { length: 180, width: 120, price: 13200 },
+  { length: 220, width: 120, price: 13600 },
+  { length: 250, width: 120, price: 13900 },
 ]
 
 const woods = [
-  { name: "Apfelbaum", image: "apple" },
-  { name: "Nussbaum", image: "nut" },
+  { name: "Apfel", image: "apple" },
+  { name: "Nuss", image: "nut" },
   { name: "Ahorn", image: "maple" },
 ]
 
@@ -67,7 +68,7 @@ const Shop = () => {
       const apiEndpoint = "/checkout"
       const body = {
         quantity: 1,
-        client_reference_id: "UniqueString",
+        client_reference_id: uuidv4(),
         dimension: `${sizes[size].length} x ${sizes[size].width}`,
         price: sizes[size].price * 100, // in cents
         wood: woods[wood].name,
@@ -98,7 +99,7 @@ const Shop = () => {
 
   return (
     <>
-      <pre>{formik.isValid}</pre>
+      <h1 className="text-3xl font-mono"></h1>
       <ChooseSize sizes={sizes} value={size} onChange={setSize} />
       <ChooseWood woods={woods} value={wood} onChange={setWood} />
       <form onSubmit={formik.handleSubmit}>

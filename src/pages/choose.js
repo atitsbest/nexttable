@@ -33,7 +33,7 @@ const SecondPage = () => (
     <Contact />
     <Divider />
     <Swelltext
-      subheadline="Wie lange ist die Lieferzeit?"
+      subheadline="Mit welcher Lieferzeit ist zu rechnen?"
       text="Ihr Tisch wird individuell für Sie hergestellt.Lieferzeit ca. 12 Wochen ab abgeschlossener Bestellabwicklung und nach übermittelter Auftragsbestätigung durch uns. Holz ist ein Naturprodukt - je nach möglicher Rohmaterialbeschaffung kann sich die Lieferzeit auch verändern, wir informieren Sie natürlich umgehend. Aber machen Sie sich keine Sorgen, alles wird gut!"
     />
     <Swelltext

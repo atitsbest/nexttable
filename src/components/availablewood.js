@@ -44,19 +44,19 @@ const AvailableWood = ({ selector }) => {
         <li className="flex flex-col text-center">
           <Link to="/choose">
             <Img fluid={data.appleImage.childImageSharp.fluid} />
-            <strong className="mt-1">Apfelbaum</strong>
+            <strong className="mt-1">NExT Table - Apfel</strong>
           </Link>
         </li>
         <li className="flex flex-col text-center">
           <Link to="/choose">
             <Img fluid={data.nutImage.childImageSharp.fluid} />
-            <strong className="mt-1">Nussbaum</strong>
+            <strong className="mt-1">NExT Table - Nuss</strong>
           </Link>
         </li>
         <li className="flex flex-col text-center">
           <Link to="/choose">
             <Img fluid={data.mapleImage.childImageSharp.fluid} />
-            <strong className="mt-1">Ahorn</strong>
+            <strong className="mt-1">NExT Table - Ahorn</strong>
           </Link>
         </li>
       </ul>
