@@ -9,9 +9,7 @@ import { loadStripe } from "@stripe/stripe-js"
 import { withPrefix } from "gatsby"
 import { API } from "aws-amplify"
 
-const stripePromise = loadStripe(
-  "pk_test_51IEg9pAk2f4BlUnVOqNgA7vwgVbgOk2SJe4u7xMe7Z8QBckUa9HuUoEL5ZHytLdtAWka5ZAVmjrhRdKXNv7swNhs00vSGQD47r"
-)
+const stripePromise = loadStripe(process.env.STRIPE_SECRET_KEY)
 
 const sizes = [
   { length: 180, width: 120, price: 13900 },
