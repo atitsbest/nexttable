@@ -9,9 +9,7 @@ function Delivery() {
           <img src={icon} width="32" alt="Lieferbedinugen" />
         </div>
         <div className="w-3/6 text-sm ml-4 mr-2">
-          <strong style={{ fontFamily: "Benton Sans Medium" }}>
-            Lieferbedinungen
-          </strong>
+          <strong className="mb-2 block">Lieferbedinungen</strong>
           <p className="text-gray-700">
             <strong>Österreich:</strong> inklusive liefern und aufstellen!
             <br />
@@ -31,6 +29,7 @@ function Delivery() {
           <p className="text-gray-700">
             <strong>Rückgabe:</strong> Das Möbelstück wird direkt für Sie
             angefertigt. Eine Rückgabe ist nicht möglich.
+            <br />
             <br />
             <strong>Widerrufsrecht:</strong> Die Widerrufsfrist beträgt 14 Tage
             ab dem Tag der Bestellung.

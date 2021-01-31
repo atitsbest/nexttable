@@ -138,7 +138,7 @@ const Megablah = () => {
       <br />
       <Blah
         image={data.oak.childImageSharp.fluid}
-        header="Eiche für tragende Aufgaben"
+        header="Tischgestell aus Eiche für tragende Aufgaben"
         text="Hart, standfest und äußerst stabil. Perfekt geeignet für tragende Aufgaben. Zeitlos im Erscheinungsbild."
       />
     </div>

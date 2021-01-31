@@ -6,10 +6,7 @@ function CustomerAddress(props) {
   const labelClasses = "block w-full mt-2"
   return (
     <div className="container mx-auto">
-      <h2
-        className="text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline"
-        style={{ fontFamily: "Benton Sans Medium" }}
-      >
+      <h2 className="text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline">
         <small className="mr-2 font-mono text-gray-500">3.</small>
         Lieferadresse
       </h2>

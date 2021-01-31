@@ -10,9 +10,11 @@ const Footer = () => (
       <Divider />
       <div className="container flex justify-between">
         <div className="">
+          {/*
           <Link to="/agbs/" className="uppercase text-xs mr-3 text-gray-500">
             AGBs
           </Link>
+          */}
           <Link
             to="/impressum/"
             className="uppercase text-xs mr-3 text-gray-500"
@@ -26,10 +28,11 @@ const Footer = () => (
             Datenschutz
           </Link>
         </div>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 gap-2">
           <Link to="/choose" className="uppercase text-xs text-gray-500">
             Shop
           </Link>
+          {/*
           <Link to="/" className="mx-auto">
             <img
               src={love}
@@ -38,14 +41,15 @@ const Footer = () => (
               alt="Show your love"
             />
           </Link>
-          <Link to="/" className="mx-auto">
+          */}
+          <a href="mailto:joachim@thening.at" className="mx-auto">
             <img
               src={contact}
               width="16"
               style={{ opacity: 0.7 }}
               alt="Kontakt"
             />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

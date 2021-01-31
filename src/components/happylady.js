@@ -24,15 +24,19 @@ const HappyLady = () => {
       <div className="container mx-auto bg-black relative">
         <Img fluid={data.placeholderImage.childImageSharp.fluid} />
         <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start max-w-xs text-white">
-          <p className="mb-4 text-base text-left font-semibold">
+          <h4 className="mb-4 text-left" style={{ fontSize: "1.125rem" }}>
             "Egal ob in Kunst und Kultur, oder im Sport: mich überzweugen
             Originalität, Kreativität und Leidenschaft für die "großen" und
             "kleinen" Dinge im Leben. Vor allem aber bin ich neugierig auf
             Menschen. NExT Table ist für mich der Tisch, der all das in sich
             vereint."
-          </p>
-          <strong className="text-sm">Elisabeth Mayr Kern</strong>
-          <i className="text-sm">Kultur- und Kommunikationsexpertin</i>
+          </h4>
+          <strong className="text-xs" style={{ fontSize: ".875rem" }}>
+            Elisabeth Mayr Kern
+          </strong>
+          <i className="text-xs" style={{ fontSize: ".875rem" }}>
+            Kultur- und Kommunikationsexpertin
+          </i>
         </div>
       </div>
     </div>

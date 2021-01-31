@@ -3,11 +3,11 @@ import React from "react"
 
 function Swelltext({ text, headline, subheadline }) {
   return (
-    <div className="container mx-auto max-w-md flex flex-col align-center text-center m-8 mb-0">
+    <div className="container mx-auto max-w-lg flex flex-col align-center text-center m-8 mb-0">
       {subheadline && (
-        <h3 className="mb-4" style={{ fontFamily: "Benton Sans Medium" }}>
+        <h4 className="mb-4 font-semibold" style={{ fontSize: "1.4rem" }}>
           {subheadline}
-        </h3>
+        </h4>
       )}
       {headline && (
         <h1 className="uppercase text-3xl font-bold mb-4">{headline}</h1>

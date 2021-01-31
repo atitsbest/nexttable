@@ -9,9 +9,7 @@ function Fulfillment() {
           <img src={icon} width="32" alt="Auftragsabwicklung" />
         </div>
         <div className="w-3/6 text-sm ml-4 mr-2">
-          <strong style={{ fontFamily: "Benton Sans Medium" }}>
-            Auftragsabwicklung
-          </strong>
+          <strong className="mb-2 block">Auftragsabwicklung</strong>
           <p className="text-gray-700">
             Nachdem Sie kostenpflichtig bestellt und wir Ihnen die
             Auftragsbestätigung zugeschickt haben, beginnt umgehend die

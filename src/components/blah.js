@@ -13,9 +13,7 @@ const Blah = ({ image, header, text }) => {
         <Img fluid={{ ...image, aspectRatio: 25 / 9 }} />
       </div>
       <div className="w-4/6 flex flex-col">
-        <span className="text-sm" style={{ fontFamily: "Benton Sans Medium" }}>
-          {header}
-        </span>
+        <strong className="text-sm">{header}</strong>
         <small>{text}</small>
       </div>
     </div>

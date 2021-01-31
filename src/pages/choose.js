@@ -16,10 +16,9 @@ import Fulfillment from "../components/fulfillment"
 const SecondPage = () => (
   <Layout>
     <SEO title="Choose" />
-    <Hero
-      text="Choose your table"
-      subtitle="Next Level - Next Table - Next Design. Stilvolles Wohnen mit x"
-    />
+    <Hero subtitle="Next Level - Next Table - Next Design. Stilvolles Wohnen mit x">
+      Choose your table
+    </Hero>
     <Shop />
     <br />
     <Divider />

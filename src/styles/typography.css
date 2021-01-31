@@ -25,11 +25,18 @@
   h2,
   h3,
   h4 {
-    font-familiy: Arial, sans-serif;
+    font-family: "Arial", "sans-serif";
     font-weight: 200;
   }
 
-  strong {
-    font-family: "Benton Sans Medium", sans-serif;
+  p,
+  span {
+    font-family: "Benton Sans Light", "sans-serif";
+  }
+
+  b,
+  strong strong {
+    font-family: "Benton Sans Medium", "sans-serif";
+    line-height: 1.5em;
   }
 }

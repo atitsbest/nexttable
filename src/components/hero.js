@@ -3,7 +3,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Hero = ({ text, subtitle }) => {
+const Hero = ({ children, subtitle }) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "xtable-2.jpg" }) {
@@ -28,17 +28,17 @@ const Hero = ({ text, subtitle }) => {
             ...data.placeholderImage.childImageSharp.fluid,
           }}
         />
-        {text && (
+        {children && (
           <div className="absolute inset-0 flex justify-center mt-8">
-            <h1 className="text-3xl text-white text-center font-bold uppercase max-w-sm">
-              {text}
+            <h1 className="text-3xl text-white text-center uppercase max-w-xl">
+              {children}
             </h1>
           </div>
         )}
       </div>
       {subtitle && (
-        <div className="container mx-auto">
-          <h3 className="text-xl">{subtitle}</h3>
+        <div className="container mx-auto max-w-lg text-center pb-4">
+          <span className="text-xl text-white block">{subtitle}</span>
         </div>
       )}
     </div>
@@ -46,12 +46,10 @@ const Hero = ({ text, subtitle }) => {
 }
 
 Hero.propTypes = {
-  text: PropTypes.string,
   subtitle: PropTypes.string,
 }
 
 Hero.defaultProps = {
-  text: ``,
   subtitle: null,
 }
 

@@ -15,7 +15,12 @@ import Megablah from "../components/megablah"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Hero text="NEXT LEVEL -	NEXT TABLE -NEXT DESIGN. STILVOLLES WOHNEN MIT X" />
+    <Hero>
+      <span>
+        NEXT LEVEL - NEXT TABLE -NEXT DESIGN.
+        <br /> STILVOLLES WOHNEN MIT X
+      </span>
+    </Hero>
     <Gotoshop />
     <Explosion />
     <Divider />
