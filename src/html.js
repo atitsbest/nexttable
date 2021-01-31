@@ -3,7 +3,10 @@ import PropTypes from "prop-types"
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html
+      {...props.htmlAttributes}
+      className="text-gray-800 leading-tight text-lg antialiased"
+    >
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />

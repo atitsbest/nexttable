@@ -1,5 +1,6 @@
-@import url("./typography.css");
 @import url("./button.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("./typography.css");
