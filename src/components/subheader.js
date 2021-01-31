@@ -8,6 +8,7 @@ function Subheader({ siteTitle }) {
   const style = {
     ul: {
       listStyleType: "none",
+      fontSize: ".825rem",
     },
   }
 

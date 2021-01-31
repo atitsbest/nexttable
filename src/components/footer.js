@@ -8,7 +8,10 @@ const Footer = () => (
   <footer style={{ width: "100%", marginBottom: 32 }}>
     <div className="container mx-auto">
       <Divider />
-      <div className="container flex justify-between">
+      <div
+        className="container flex justify-between"
+        style={{ fontSize: ".825rem" }}
+      >
         <div className="">
           {/*
           <Link to="/agbs/" className="uppercase text-xs mr-3 text-gray-500">
