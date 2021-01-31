@@ -7,6 +7,13 @@ const TheJo = () => {
     query {
       placeholderImage: file(relativePath: { eq: "jo.jpg" }) {
         childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      placeholderImageSm: file(relativePath: { eq: "jo_sm.jpg" }) {
+        childImageSharp {
           fluid(maxWidth: 960) {
             ...GatsbyImageSharpFluid
           }
@@ -22,16 +29,27 @@ const TheJo = () => {
   return (
     <div className="mt-12">
       <div className="container mx-auto bg-gray-200 relative">
-        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+        <Img
+          className="hidden md:block"
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+        <Img
+          className="block md:hidden"
+          fluid={data.placeholderImageSm.childImageSharp.fluid}
+        />
         <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start max-w-xs">
-          <p className="mb-4 text-base text-left font-semibold">
+          <h4 className="mb-4 text-left" style={{ fontSize: "1.125rem" }}>
             "Für mich ist entscheidend, dass Design mit Wissen und Kompetenz
             umgesetzt wird. Next Table ist deshalb besonders, weil bei diesem
             Tisch alles passt. Perfektes Hand-werk macht meinen Next Table zu
             einem Designstück zum Leben."
-          </p>
-          <strong className="text-sm">Joachim Jungreithmayr</strong>
-          <i className="text-sm">Architeckt mit einer Leidenschaft für Möbel</i>
+          </h4>
+          <strong className="text-lg block" style={{ fontSize: ".875rem" }}>
+            Joachim Jungreithmayr
+          </strong>
+          <i className="text-xs" style={{ fontSize: ".875rem" }}>
+            Architeckt mit einer Leidenschaft für Möbel
+          </i>
         </div>
       </div>
     </div>

@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 const Gotoshop = ({ text }) => {
   return (
     <div className="container mx-auto mt-4 flex flex-col align-center max-w-md">
-      <h1 className="text-xl text-center mb-8">
+      <span className="text-xl text-center mb-8">
         High-end Design trifft Handwerk mit Perfektion. Das Ergebnis: ein
         einzigartiger Tisch zum Wohnen und Leben. Stilvolles Design für perfekte
         Augenblicke.
-      </h1>
+      </span>
       <Link className="button" to="/choose">
         shop...
       </Link>

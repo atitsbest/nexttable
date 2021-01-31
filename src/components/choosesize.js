@@ -4,10 +4,7 @@ import React from "react"
 function ChooseSize({ sizes, value, onChange }) {
   return (
     <div className="container mx-auto mt-12">
-      <h2
-        className="text-3xl uppercase mb-10 font-normal flex items-baseline justify-center"
-        style={{ fontFamily: "Benton Sans Medium" }}
-      >
+      <h2 className="text-3xl uppercase mb-10 font-normal flex items-baseline justify-center">
         <small className="mr-2 font-mono text-gray-500">1.</small>
         Größe wählen
       </h2>
@@ -22,13 +19,10 @@ function ChooseSize({ sizes, value, onChange }) {
           />
         ))}
       </div>
-      <p
-        className="mt-4 text-center"
-        style={{ fontFamily: "Benton Sans Medium" }}
-      >
+      <strong className="mt-4 text-center block">
         Wir erfüllen gerne ihre Sonderwünsche! Schreiben Sie uns einfach, und
         wir treffen uns zu einem persönlichen Tischgespräch.
-      </p>
+      </strong>
     </div>
   )
 }

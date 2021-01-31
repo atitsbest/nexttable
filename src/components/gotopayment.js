@@ -17,9 +17,7 @@ function GotoPayment({ enabled, loading }) {
         disabled={!enabled}
       >
         {loading && <Spinner />}&nbsp;
-        <span className={`${loading ? "text-gray-400" : ""}`}>
-          Zur Zahlung...
-        </span>
+        <h3 className={`${loading ? "text-gray-400" : ""}`}>Zur Zahlung...</h3>
       </button>
     </div>
   )

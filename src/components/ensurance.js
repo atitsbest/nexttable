@@ -9,9 +9,7 @@ function Ensurance() {
           <img src={icon} width="32" alt="Lieferversicherung" />
         </div>
         <div className="w-3/6 text-sm ml-4 mr-2">
-          <strong style={{ fontFamily: "Benton Sans Medium" }}>
-            Lieferversicherung
-          </strong>
+          <strong>Lieferversicherung</strong>
         </div>
         <div className="w-3/6 text-sm ml-2">
           <p className="text-gray-700">Inklusive.</p>

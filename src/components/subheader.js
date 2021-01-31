@@ -8,6 +8,7 @@ function Subheader({ siteTitle }) {
   const style = {
     ul: {
       listStyleType: "none",
+      fontSize: ".825rem",
     },
   }
 
@@ -23,11 +24,15 @@ function Subheader({ siteTitle }) {
             Shop
           </Link>
         </li>
-        <li className="mr-4">
+        {/* 
+       <li className="mr-4">
           <img src={love} width="16" alt="Show your love" />
         </li>
+        */}
         <li className="mr-4">
-          <img src={contact} width="16" alt="Kontakt" />
+          <a href="mailto:joachim@thening.at">
+            <img src={contact} width="16" alt="Kontakt" />
+          </a>
         </li>
       </ul>
     </div>

@@ -1,19 +1,41 @@
-@font-face {
-  font-family: "Benton Sans Light";
-  src: url("../fonts/Benton\ Sans\ Light.otf");
+@layer base {
+  @font-face {
+    font-family: "Benton Sans Light";
+    src: url("../fonts/Benton\ Sans\ Light.otf");
+  }
+
+  @font-face {
+    font-family: "Benton Sans Black";
+    src: url("../fonts/Benton\ Sans\ Black.otf");
+  }
+
+  @font-face {
+    font-family: "Benton Sans Book Italic";
+    src: url("../fonts/Benton\ Sans\ Book Italic.otf");
+  }
+
+  @font-face {
+    font-family: "Benton Sans Medium";
+    src: url("../fonts/Benton\ Sans\ Medium.otf");
+  }
 }
 
-@font-face {
-  font-family: "Benton Sans Black";
-  src: url("../fonts/Benton\ Sans\ Black.otf");
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Arial", "sans-serif";
+  font-weight: 200;
 }
 
-@font-face {
-  font-family: "Benton Sans Book Italic";
-  src: url("../fonts/Benton\ Sans\ Book Italic.otf");
+p,
+span {
+  font-family: "Benton Sans Light", "sans-serif";
 }
 
-@font-face {
-  font-family: "Benton Sans Medium";
-  src: url("../fonts/Benton\ Sans\ Medium.otf");
+b,
+strong {
+  font-family: "Benton Sans Medium", "sans-serif";
+  line-height: 1.5em;
+  font-weight: 400 !important;
 }

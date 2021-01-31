@@ -26,6 +26,8 @@ const SecondPage = () => (
         <br />
         tischler@thening.at
         <br />
+        www.tischlereiarchitektur.at
+        <br />
         <br />
         ATU 22634102
       </p>
