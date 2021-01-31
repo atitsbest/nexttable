@@ -7,6 +7,13 @@ const TheJo = () => {
     query {
       placeholderImage: file(relativePath: { eq: "jo.jpg" }) {
         childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      placeholderImageSm: file(relativePath: { eq: "jo_sm.jpg" }) {
+        childImageSharp {
           fluid(maxWidth: 960) {
             ...GatsbyImageSharpFluid
           }
@@ -22,7 +29,14 @@ const TheJo = () => {
   return (
     <div className="mt-12">
       <div className="container mx-auto bg-gray-200 relative">
-        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+        <Img
+          className="hidden md:block"
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+        <Img
+          className="block md:hidden"
+          fluid={data.placeholderImageSm.childImageSharp.fluid}
+        />
         <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start max-w-xs">
           <h4 className="mb-4 text-left" style={{ fontSize: "1.125rem" }}>
             "Für mich ist entscheidend, dass Design mit Wissen und Kompetenz

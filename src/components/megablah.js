@@ -14,7 +14,7 @@ const Megablah = () => {
           }
         }
       }
-      two: file(relativePath: { eq: "holz1.jpg" }) {
+      two: file(relativePath: { eq: "fortlaufendemaserung.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid

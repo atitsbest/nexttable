@@ -12,6 +12,13 @@ const HappyLady = () => {
           }
         }
       }
+      placeholderImageSm: file(relativePath: { eq: "lady_sm.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -22,7 +29,14 @@ const HappyLady = () => {
   return (
     <div className="mt-12">
       <div className="container mx-auto bg-black relative">
-        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+        <Img
+          className="hidden md:block"
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+        <Img
+          className="block md:hidden"
+          fluid={data.placeholderImageSm.childImageSharp.fluid}
+        />
         <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start max-w-xs text-white">
           <h4 className="mb-4 text-left" style={{ fontSize: "1.125rem" }}>
             "Egal ob in Kunst und Kultur, oder im Sport: mich überzweugen
