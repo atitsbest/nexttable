@@ -27,8 +27,8 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col justify-center">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Subheader siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="">
+      <div className="max-w-screen-md m-auto">
+        <Subheader siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
       </div>
       <Footer />

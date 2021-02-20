@@ -58,6 +58,7 @@ const Shop = () => {
     },
   })
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   React.useEffect(() => {
     setCanGotoPayment(
       size != null && wood != null && formik.isValid && formik.touched
@@ -101,7 +102,7 @@ const Shop = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-mono"></h1>
+      <h1 className="text-3xl font-mono">&nbsp;</h1>
       <ChooseSize sizes={sizes} value={size} onChange={setSize} />
       <ChooseWood woods={woods} value={wood} onChange={setWood} />
       <form onSubmit={formik.handleSubmit}>

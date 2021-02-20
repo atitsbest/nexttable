@@ -23,6 +23,7 @@ function CustomerAddress(props) {
         <Input label="Stadt" name="city" {...props} />
         <label className={labelClasses}>
           <span className="text-gray-700">Land</span>
+          {/* eslint-disable jsx-a11y/no-onchange */}
           <select
             name="country"
             class={inputClasses}

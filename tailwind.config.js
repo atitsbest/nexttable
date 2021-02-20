@@ -3,7 +3,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Benton Sans Light", "Arial", "sans-serif"],
+      sans: ["Benton Sans Light", "sans-serif"],
       serif: ["Georgia", "serif"],
     },
     fontSize: {

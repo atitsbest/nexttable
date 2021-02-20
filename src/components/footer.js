@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import Divider from "./divider"
-import love from "../images/love.png"
 import contact from "../images/contact.png"
 
 const Footer = () => (

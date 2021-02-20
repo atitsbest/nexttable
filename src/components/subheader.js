@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import love from "../images/love.png"
 import contact from "../images/contact.png"
 
 function Subheader({ siteTitle }) {
