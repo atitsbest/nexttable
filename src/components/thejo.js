@@ -37,18 +37,18 @@ const TheJo = () => {
           className="block md:hidden"
           fluid={data.placeholderImageSm.childImageSharp.fluid}
         />
-        <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start max-w-xs">
-          <h4 className="mb-4 text-left" style={{ fontSize: "1.125rem" }}>
+        <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start">
+          <h4 className="w-5/12 text-left mb-4" style={{ fontSize: "1.5rem" }}>
             "Für mich ist entscheidend, dass Design mit Wissen und Kompetenz
             umgesetzt wird. Next Table ist deshalb besonders, weil bei diesem
-            Tisch alles passt. Perfektes Hand-werk macht meinen Next Table zu
+            Tisch alles passt. Perfektes Handwerk macht meinen Next Table zu
             einem Designstück zum Leben."
           </h4>
           <strong className="text-lg block" style={{ fontSize: ".875rem" }}>
             Joachim Jungreithmayr
           </strong>
           <i className="text-xs" style={{ fontSize: ".875rem" }}>
-            Architeckt mit einer Leidenschaft für Möbel
+            Architekt mit einer Leidenschaft für Möbel
           </i>
         </div>
       </div>
