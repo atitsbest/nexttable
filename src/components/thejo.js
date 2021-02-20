@@ -38,7 +38,7 @@ const TheJo = () => {
           fluid={data.placeholderImageSm.childImageSharp.fluid}
         />
         <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start">
-          <h4 className="w-5/12 text-left mb-4" style={{ fontSize: "1.5rem" }}>
+          <h4 className="md:w-5/12 md:text-2xl text-left mb-4">
             "Für mich ist entscheidend, dass Design mit Wissen und Kompetenz
             umgesetzt wird. Next Table ist deshalb besonders, weil bei diesem
             Tisch alles passt. Perfektes Handwerk macht meinen Next Table zu

@@ -38,7 +38,7 @@ const HappyLady = () => {
           fluid={data.placeholderImageSm.childImageSharp.fluid}
         />
         <div className="absolute inset-0 mt-6 ml-6 flex flex-col align-start text-white">
-          <h4 className="w-5/12 text-left mb-4" style={{ fontSize: "1.5rem" }}>
+          <h4 className="md:w-5/12 md:text-2xl text-left mb-4">
             "Egal ob in Kunst und Kultur, oder im Sport: mich überzweugen
             Originalität, Kreativität und Leidenschaft für die "großen" und
             "kleinen" Dinge im Leben. Vor allem aber bin ich neugierig auf
