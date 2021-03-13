@@ -76,12 +76,7 @@ function Item({ headline, text, right }) {
       className="flex flex-col text-sm border-b border-gray-500 mb-4 sm:mb-0"
       style={{ textAlign: right ? "right" : "left" }}
     >
-      <strong
-        className="font-normal"
-        style={{ fontFamily: "Benton Sans Medium" }}
-      >
-        {headline}
-      </strong>
+      <strong className="font-normal">{headline}</strong>
       <span className="">{text}</span>
     </div>
   )

@@ -5,6 +5,7 @@ module.exports = {
     author: `atitsbest.dev@gmail.com`,
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,7 +28,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Montserrat\:100,200,600`, `Playfair Display\:600`],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

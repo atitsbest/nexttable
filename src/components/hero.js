@@ -30,7 +30,7 @@ const Hero = ({ children, subtitle }) => {
         />
         {children && (
           <div className="absolute inset-0 flex justify-center mt-8">
-            <h1 className="text-3xl text-white text-center uppercase max-w-xl">
+            <h1 className="text-2xl text-white text-center uppercase max-w-xl">
               {children}
             </h1>
           </div>
@@ -38,7 +38,7 @@ const Hero = ({ children, subtitle }) => {
       </div>
       {subtitle && (
         <div className="container mx-auto max-w-lg text-center pb-4">
-          <span className="text-xl text-white block">{subtitle}</span>
+          <span className="text-lg text-white block">{subtitle}</span>
         </div>
       )}
     </div>

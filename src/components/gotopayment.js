@@ -13,7 +13,7 @@ function GotoPayment({ enabled, loading }) {
          }
         ${loading ? "bg-black text-gray-200" : ""}
          `}
-        style={{ fontFamily: "Benton Sans Medium", opacity: enabled ? 1 : 0.5 }}
+        style={{ opacity: enabled ? 1 : 0.5 }}
         disabled={!enabled}
       >
         {loading && <Spinner />}&nbsp;

@@ -39,7 +39,6 @@ function Item({ dimension, price, selected, onSelectionChange }) {
         className={`border text-center p-1 pl-8 pr-8 border-black  ${
           selected ? "text-white bg-black" : "hover:bg-gray-100"
         }`}
-        style={{ fontFamily: "Benton Sans Medium" }}
       >
         {dimension}
       </div>

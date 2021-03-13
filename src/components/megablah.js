@@ -87,13 +87,13 @@ const Megablah = () => {
         header="Einzigartiges Design"
         text="Next table ist mehr als nur ein Esstisch und auch mehr als nur Design. Er verbindet Menschen."
       />
-      <Divider />
+      <Divider className="invisible md:visible" />
       <Blahblah
         image={data.two.childImageSharp.fluid}
         header="Fortlaufende Holzmaserung"
         text="NExT Table spielt nicht mit Perfektion, er ist perfekt bis ins handwerkliche Detail gearbeitet. Die Maserung des Vollholzes bei der Tischplatte und der Fußkonstruktion sind bewusst quer ausgeführt – das ist außergewöhnlich im Möbel-Massiv-Holzbau. Durch die auf Gehrung zusammengefügten Holzstücke wird ein fortlaufender und stufenloser Übergang ermöglicht."
       />
-      <Divider />
+      <Divider className="invisible md:visible" />
       <Blahblah
         image={data.blah3.childImageSharp.fluid}
         header="High-end Tisch-Plattenaufbau"
@@ -117,19 +117,19 @@ const Megablah = () => {
         header="Ahorn - zart und fein zugleich"
         text="Das Ahornholz ist wunderschön hell, freundlich und mit elegant marmorierter Maserung. Die Oberfläche ist hart und fein zugleich."
       />
-      <Divider />
+      <Divider className="invisible md:visible" />
       <Blahblah
         image={data.blah2.childImageSharp.fluid}
         header="Natur pur"
         text="Durch die Vielfalt, die Holz bietet, ist es ideal, um Design und Konstruktion aus einem Werkstoff umzusetzen. Zur Oberflächenbehandlung wird reines Naturöl verwendet, um die samtige Haptik besonders heraus zu arbeiten und um das Holz zu schützen."
       />
-      <Divider />
+      <Divider className="invisible md:visible" />
       <Blahblah
         image={data.blah1.childImageSharp.fluid}
         header="Höchste Handwerkskunst"
         text="NExT Table ist ein Designobjekt, das in der Tischlerei der Familie Jungreithmayr Schritt für Schritt ensteht - kompromisslos per Hand in der eigenen Holzwerkstatt. Mehrfache verschränkte Knotenverbindung werden für jeden Tisch individuell gefertigt/hergestellt/produziert."
       />
-      <Divider />
+      <Divider className="invisible md:visible" />
       <Blahblah
         image={data.blah4.childImageSharp.fluid}
         header="Faszinierende Fußlösung"

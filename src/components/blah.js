@@ -8,11 +8,11 @@ const Blah = ({ image, header, text }) => {
   }
 
   return (
-    <div className="flex justify-between items-center gap-6 mr-2">
-      <div className="w-2/6">
+    <div className="mx-6 md:flex md:justify-between md:items-center md:gap-6 md:mr-2">
+      <div className="w-full md:w-2/6">
         <Img fluid={{ ...image, aspectRatio: 25 / 9 }} />
       </div>
-      <div className="w-4/6 flex flex-col">
+      <div className="md:w-4/6 flex flex-col">
         <strong style={{ fontSize: ".875rem" }}>{header}</strong>
         <span style={{ fontSize: ".875rem" }}>{text}</span>
       </div>

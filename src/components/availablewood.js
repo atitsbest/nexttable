@@ -3,6 +3,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import Divider from "./divider"
 
 const AvailableWood = ({ selector }) => {
   const data = useStaticQuery(graphql`
@@ -32,9 +33,9 @@ const AvailableWood = ({ selector }) => {
   `)
 
   return (
-    <div className="container mx-auto">
+    <div className="mx-6">
       <ul
-        className="flex justify-around grid grid-cols-3 gap-4"
+        className="md:flex md:justify-around md:grid md:grid-cols-3 md:gap-4"
         style={{
           margin: 0,
           padding: 0,
@@ -44,19 +45,27 @@ const AvailableWood = ({ selector }) => {
         <li className="flex flex-col text-center">
           <Link to="/choose">
             <Img fluid={data.appleImage.childImageSharp.fluid} />
-            <strong className="mt-1">NExT Table - Apfel</strong>
+            <strong className="mt-1 font-serif whitespace-nowrap">
+              NExT Table - Apfel
+            </strong>
           </Link>
+          <Divider className="visible md:invisible" />
         </li>
         <li className="flex flex-col text-center">
           <Link to="/choose">
             <Img fluid={data.nutImage.childImageSharp.fluid} />
-            <strong className="mt-1">NExT Table - Nuss</strong>
+            <strong className="mt-1 font-serif whitespace-nowrap">
+              NExT Table - Nuss
+            </strong>
           </Link>
+          <Divider className="visible md:invisible" />
         </li>
         <li className="flex flex-col text-center">
           <Link to="/choose">
             <Img fluid={data.mapleImage.childImageSharp.fluid} />
-            <strong className="mt-1">NExT Table - Ahorn</strong>
+            <strong className="mt-1 font-serif whitespace-nowrap">
+              NExT Table - Ahorn
+            </strong>
           </Link>
         </li>
       </ul>
