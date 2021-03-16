@@ -32,7 +32,7 @@ const ChooseWood = ({ woods, value, onChange }) => {
   return (
     <div className="max-w bg-gray-100 pt-4 pb-4 mt-8">
       <div className="container mx-auto">
-        <h2 className="text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline">
+        <h2 className="text-xl md:text-2xl lg:text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline">
           <small className="mr-2 font-mono text-gray-500">2.</small>
           Holz wählen
         </h2>

@@ -4,9 +4,9 @@ import Divider from "./divider"
 import contact from "../images/contact.png"
 
 const Footer = () => (
-  <footer style={{ width: "100%", marginBottom: 32 }}>
-    <div className="container mx-auto">
-      <Divider />
+  <footer className="w-full my-6">
+    <Divider />
+    <div className="container mx-auto px-6">
       <div
         className="container flex justify-between"
         style={{ fontSize: ".825rem" }}

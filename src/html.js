@@ -5,7 +5,7 @@ export default function HTML(props) {
   return (
     <html
       {...props.htmlAttributes}
-      className="text-gray-800 leading-tight text-lg antialiased"
+      className="box-border text-gray-800 leading-tight text-lg antialiased"
     >
       <head>
         <meta charSet="utf-8" />

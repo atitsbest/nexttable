@@ -13,7 +13,9 @@ const Blahblah = ({ image, header, text }) => {
         <Img fluid={{ ...image, aspectRatio: 1 / 1 }} />
       </div>
       <div className="md:w-4/6">
-        <h3 className="text-3xl uppercase mb-4 leading-10">{header}</h3>
+        <h3 className="text-xl md:text-2xl lg:text-3xl uppercase mb-4 leading-10">
+          {header}
+        </h3>
         <p>{text}</p>
       </div>
     </div>

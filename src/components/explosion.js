@@ -21,41 +21,40 @@ const Explosion = () => {
   }
 
   return (
-    <div className="container mx-auto mt-8">
-      <div className="relative sm:flex sm:justify-center">
-        <Img
-          fluid={{
-            ...data.placeholderImage.childImageSharp.fluid,
-            aspectRatio: 21 / 9,
-          }}
-          className="mx-auto"
-          style={{ width: "80%" }}
-        />
-        <div className="sm:flex sm:absolute inset-0 sm:grid sm:grid-cols-2 sm:gap-8 mt-4 mb-16">
+    <div className="mx-auto mt-8 px-3">
+      <div className="">
+        <div className="">
           <div>
-            <div className="ml-8 grid sm:grid-rows-3 sm:gap-8">
+            <div className="">
               <Item
                 headline="High-end Tischplattenaufbau"
                 text="5cm an höchster Stabilität"
               />
               <Item
-                headline="Einzigartiges Design"
-                text="Ein Tisch, der alle(s) verbindet"
-              />
-              <Item headline="Natur pur" text="Keine versteckten Metallteile" />
-            </div>
-          </div>
-          <div>
-            <div className="mr-8 grid sm:grid-rows-3 sm:gap-8">
-              <Item
                 headline="Höchste Handwerkskunst"
                 text="100% österreichische Qualität"
                 right
               />
+            </div>
+          </div>
+          <Img
+            fluid={{
+              ...data.placeholderImage.childImageSharp.fluid,
+              aspectRatio: 21 / 9,
+            }}
+            className="mx-auto w-4/5"
+          />
+          <div>
+            <div className="flex flex-col w-full">
+              <Item headline="Natur pur" text="Keine versteckten Metallteile" />
               <Item
                 headline="Fortlaufende Holzmaserung"
                 text="Perfekte Holzbearbeitung bis ins Detail"
                 right
+              />
+              <Item
+                headline="Einzigartiges Design"
+                text="Ein Tisch, der alle(s) verbindet"
               />
               <Item
                 headline="Faszinierende Fußlösung"
@@ -73,11 +72,18 @@ const Explosion = () => {
 function Item({ headline, text, right }) {
   return (
     <div
-      className="flex flex-col text-sm border-b border-gray-500 mb-4 sm:mb-0"
-      style={{ textAlign: right ? "right" : "left" }}
+      className="mt-4 md:mt-0 flex flex-col text-sm"
+      style={{
+        alignItems: right ? "flex-end" : "flex-start",
+        textAlign: right ? "right" : "left",
+      }}
     >
-      <strong className="font-normal">{headline}</strong>
-      <span className="">{text}</span>
+      <h2 className="leading-tight w-8/12">{headline}</h2>
+      <span className="text-xs w-8/12">{text}</span>
+      <div
+        className="border-b border-gray-500 mb-4 w-7/12 pt-1"
+        style={{ maxWidth: "66%" }}
+      ></div>
     </div>
   )
 }

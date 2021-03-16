@@ -9,7 +9,9 @@ const Success = () => (
   <Layout>
     <SEO title="Cancel" />
     <Divider />
-    <h1 className="text-3xl">Es ist ok, wenn Sie sich anders entscheiden.</h1>
+    <h1 className="text-xl md:text-2xl lg:text-3xl">
+      Es ist ok, wenn Sie sich anders entscheiden.
+    </h1>
     <Divider />
     <Link to="/" className="button">
       Zurück zum Start

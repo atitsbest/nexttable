@@ -4,9 +4,12 @@ import logo from "../images/logo.png"
 const Logo = () => (
   <div className="flex flex-col mt-4">
     <div className="flex flex-col items-center">
-      <img src={logo} style={{ maxHeight: "1.5rem" }} alt="Logo" />
+      <img src={logo} className="max-h-4 md:max-h-6 " alt="Logo" />
     </div>
-    <small className="text-xs mt-1" style={{ marginLeft: "30%" }}>
+    <small
+      className="text-opacity-50 text-xs mt-1"
+      style={{ marginLeft: "30%" }}
+    >
       by Joachim Jungreithmayr
     </small>
   </div>

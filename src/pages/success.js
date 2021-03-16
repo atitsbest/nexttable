@@ -9,7 +9,9 @@ const Success = () => (
   <Layout>
     <SEO title="Success" />
     <Divider />
-    <h1 className="text-3xl">Vielen Dank für Ihren Einkauf.</h1>
+    <h1 className="text-xl md:text-2xl lg:text-3xl">
+      Vielen Dank für Ihren Einkauf.
+    </h1>
     <Divider />
     <Link to="/" className="button">
       Zurück

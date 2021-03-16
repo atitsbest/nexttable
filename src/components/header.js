@@ -4,9 +4,9 @@ import React from "react"
 import Logo from "./logo"
 
 const Header = ({ siteTitle }) => (
-  <header style={{ background: "#1d1d1d" }} className="pt-4 pb-4">
-    <div className="container mx-auto">
-      <h1 style={{ margin: 0, textAlign: "center" }}>
+  <header className="pt-2 pb-3 md:pt-4 md:pb-5 bg-black">
+    <div className="mx-auto">
+      <h1 className="m-0 text-center">
         <Link
           to="/"
           style={{

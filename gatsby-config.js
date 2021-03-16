@@ -6,6 +6,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Montserrat\:100,200,600`, `Playfair Display\:600`],
+        fonts: [`Montserrat\:200,300,400,600`, `Playfair Display\:600`],
       },
     },
     {

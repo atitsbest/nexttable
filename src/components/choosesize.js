@@ -4,7 +4,7 @@ import React from "react"
 function ChooseSize({ sizes, value, onChange }) {
   return (
     <div className="container mx-auto mt-12">
-      <h2 className="text-3xl uppercase mb-10 font-normal flex items-baseline justify-center">
+      <h2 className="text-xl md:text-2xl lg:text-3xl uppercase mb-10 font-normal flex items-baseline justify-center">
         <small className="mr-2 font-mono text-gray-500">1.</small>
         Größe wählen
       </h2>

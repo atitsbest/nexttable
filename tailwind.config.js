@@ -6,7 +6,6 @@ module.exports = {
       sans: ["Montserrat", "sans-serif"],
       serif: ["Playfair Display", "serif"],
     },
-    fontSize: {},
     extend: {},
   },
   variants: {

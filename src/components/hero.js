@@ -22,20 +22,21 @@ const Hero = ({ children, subtitle }) => {
 
   return (
     <div className="max-w-full bg-black">
-      <div className="container mx-auto relative">
-        <Img
-          fluid={{
-            ...data.placeholderImage.childImageSharp.fluid,
-          }}
-        />
+      <div className="mx-auto relative">
         {children && (
-          <div className="absolute inset-0 flex justify-center mt-8">
-            <h1 className="text-2xl text-white text-center uppercase max-w-xl">
+          <div className="flex justify-center pt-4 mx-4">
+            <h1 className="text-xl text-white text-center uppercase">
               {children}
             </h1>
           </div>
         )}
       </div>
+      <Img
+        fluid={{
+          ...data.placeholderImage.childImageSharp.fluid,
+        }}
+        fadeIn
+      />
       {subtitle && (
         <div className="container mx-auto max-w-lg text-center pb-4">
           <span className="text-lg text-white block">{subtitle}</span>
