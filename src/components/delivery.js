@@ -4,11 +4,11 @@ import icon from "../images/delivery.png"
 function Delivery() {
   return (
     <div className="container mx-auto">
-      <div className="flex flex-row mx-2">
-        <div className="">
+      <div className="flex flex-col sm:flex-row mx-2">
+        <div className="absolute sm:relative">
           <img src={icon} width="32" alt="Lieferbedinugen" />
         </div>
-        <div className="w-3/6 text-sm ml-4 mr-2">
+        <div className="w-full sm:w-3/6 pl-6 pt-1 sm:pl-0 sm:pt-0 text-sm ml-4 mr-2">
           <strong className="mb-2 block">Lieferbedinungen</strong>
           <p className="text-gray-700">
             <strong>Österreich:</strong> inklusive liefern und aufstellen!
@@ -24,7 +24,7 @@ function Delivery() {
             Kundenwünsche bemühen.
           </p>
         </div>
-        <div className="w-3/6 text-sm ml-2">
+        <div className="w-full sm:w-3/6 pl-6 sm:pl-0 ml-4 sm:ml-0 text-sm ml-2">
           <strong>&nbsp;</strong>
           <p className="text-gray-700">
             <strong>Rückgabe:</strong> Das Möbelstück wird direkt für Sie
