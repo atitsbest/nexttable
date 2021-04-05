@@ -49,27 +49,6 @@ const Megablah = () => {
           }
         }
       }
-      apple: file(relativePath: { eq: "wood_apple.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      nut: file(relativePath: { eq: "wood_nut.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      maple: file(relativePath: { eq: "wood_maple.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       oak: file(relativePath: { eq: "wood_oak.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
@@ -100,23 +79,6 @@ const Megablah = () => {
         text="Die speziell hierfür entwickelte „Sandwichlösung“ aus Holz, ermöglicht eine extrem tragfähige Holzplatte mit weiter und formstabiler Auskragung, ganz ohne störenden Tischzargen."
       />
       <br />
-      <Blah
-        image={data.apple.childImageSharp.fluid}
-        header="Apfel - Das Holz zum Streicheln"
-        text="Das Holz des Apfelbaumes besticht durch sein außergewöhnliches Farbspiel. Die Oberfläche ist hart und sehr feinporig. Naturgeölt entfaltet es seine ganze Schönheit und wird haptisch samtig weich. Ein Holz zum Streicheln."
-      />
-      <br />
-      <Blah
-        image={data.nut.childImageSharp.fluid}
-        header="Nuss - pur Natur"
-        text="Das Holz des Nussbaumes ist eines der edelsten heimischen Holzarten. Gleichmäßig und wunderschön in Strukturund Farbe. Wird das Holz angefeuchtet, kann man einen zarten Nussduft wahrnehmen – pure Natur!"
-      />
-      <br />
-      <Blah
-        image={data.maple.childImageSharp.fluid}
-        header="Ahorn - zart und fein zugleich"
-        text="Das Ahornholz ist wunderschön hell, freundlich und mit elegant marmorierter Maserung. Die Oberfläche ist hart und fein zugleich."
-      />
       <Divider className="invisible md:visible" />
       <Blahblah
         image={data.blah2.childImageSharp.fluid}

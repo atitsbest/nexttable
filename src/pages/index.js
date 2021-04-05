@@ -22,6 +22,7 @@ const IndexPage = () => (
         <br /> Stilvolles Wohnen mit X
       </>
     </Hero>
+    <Swelltext text=" High-end Design trifft Handwerk mit Perfektion. Das Ergebnis: ein einzigartiger Tisch zum Wohnen und Leben. Stilvolles Design für perfekte Augenblicke. " />
     <Gotoshop />
     <Explosion />
     <Swelltext text="Ein Tisch gibt einem Wohnraum ein Zentrum; ein Ort, der Treffpunkt und Mittelpunkt ist. Joachim Jungreithmayr hat Next Table genau dafür entwickelt: außergewöhnlich edel im Design, wegweisende Perfektion in der Herstellung. Höchste Ansprüche bis ins Detail." />
@@ -38,6 +39,7 @@ const IndexPage = () => (
     <Megablah />
     <Divider />
     <HappyLady />
+    <Gotoshop />
   </Layout>
 )
 
