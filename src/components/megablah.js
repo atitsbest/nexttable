@@ -7,42 +7,42 @@ import Divider from "./divider"
 const Megablah = () => {
   const data = useStaticQuery(graphql`
     query {
-      one: file(relativePath: { eq: "choose_maple.png" }) {
+      one: file(relativePath: { eq: "einzigartiges_design.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      two: file(relativePath: { eq: "fortlaufendemaserung.jpg" }) {
+      two: file(relativePath: { eq: "maserung.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      blah1: file(relativePath: { eq: "blah1.jpg" }) {
+      blah1: file(relativePath: { eq: "handwerkskunst.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      blah2: file(relativePath: { eq: "blah2.jpg" }) {
+      blah2: file(relativePath: { eq: "wood_apple.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      blah3: file(relativePath: { eq: "blah3.png" }) {
+      highendplatte: file(relativePath: { eq: "highendplatte.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      blah4: file(relativePath: { eq: "blah4.jpg" }) {
+      blah4: file(relativePath: { eq: "fussloesung.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
@@ -66,7 +66,7 @@ const Megablah = () => {
           text="NExT Table spielt nicht mit Perfektion, er ist perfekt bis ins handwerkliche Detail gearbeitet. Die Maserung des Vollholzes bei der Tischplatte und der Fußkonstruktion sind bewusst quer ausgeführt – das ist außergewöhnlich im Möbel-Massiv-Holzbau. Durch die auf Gehrung zusammengefügten Holzstücke wird ein fortlaufender und stufenloser Übergang ermöglicht."
         />
         <Blahblah
-          image={data.blah3.childImageSharp.fluid}
+          image={data.highendplatte.childImageSharp.fluid}
           header="High-end Tisch-Plattenaufbau"
           text="Die speziell hierfür entwickelte „Sandwichlösung“ aus Holz, ermöglicht eine extrem tragfähige Holzplatte mit weiter und formstabiler Auskragung, ganz ohne störenden Tischzargen."
         />

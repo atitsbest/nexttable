@@ -4,9 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Swelltext from "../components/swelltext"
-import Contact from "../components/contact"
 import Divider from "../components/divider"
-import HappyLady from "../components/happylady"
 import Hero from "../components/hero"
 import Shop from "../components/shop"
 import Delivery from "../components/delivery"
@@ -16,9 +14,7 @@ import Fulfillment from "../components/fulfillment"
 const SecondPage = () => (
   <Layout>
     <SEO title="Choose" />
-    <Hero subtitle="Next Level - Next Table - Next Design. Stilvolles Wohnen mit x">
-      Choose your table
-    </Hero>
+    <Hero>Choose your table</Hero>
     <Shop />
     <br />
     <Divider />
@@ -27,9 +23,6 @@ const SecondPage = () => (
     <Ensurace />
     <Divider />
     <Fulfillment />
-    <Divider />
-    <HappyLady />
-    <Contact />
     <Divider />
     <Swelltext
       subheadline="Mit welcher Lieferzeit ist zu rechnen?"
