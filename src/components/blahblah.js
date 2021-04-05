@@ -8,12 +8,12 @@ const Blahblah = ({ image, header, text }) => {
   }
 
   return (
-    <div className="mx-6 md:flex md:justify-between md:items-center md:gap-6 md:mr-2">
-      <div className="w-full md:w-2/6">
+    <div className="mx-4 md:mx-0 mb-8 md:mb-0">
+      <div className="md:mb-4">
         <Img fluid={{ ...image, aspectRatio: 1 / 1 }} />
       </div>
-      <div className="md:w-4/6">
-        <h3 className="mt-4 leading-tight text-xl md:mt-0 md:text-2xl lg:text-3xl uppercase mb-4">
+      <div className="">
+        <h3 className="mt-4 leading-tight text-xl md:mt-0 uppercase mb-4">
           {header}
         </h3>
         <p>{text}</p>
