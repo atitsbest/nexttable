@@ -78,9 +78,7 @@ function Item({ headline, text, right }) {
         textAlign: right ? "right" : "left",
       }}
     >
-      <strong className="leading-tight w-8/12 whitespace-nowrap">
-        {headline}
-      </strong>
+      <strong className="leading-tight w-8/12">{headline}</strong>
       <span className="text-xs w-8/12">{text}</span>
       <div
         className="border-b border-gray-500 mb-4 w-7/12 pt-1"
