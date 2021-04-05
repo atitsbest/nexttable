@@ -8,9 +8,11 @@ function Swelltext({ text, headline, subheadline }) {
         <h4 className="mb-4 font-serif font-semibold">{subheadline}</h4>
       )}
       {headline && (
-        <h1 className="uppercase text-xl md:text-3xl mb-4">{headline}</h1>
+        <h1 className="uppercase text-2xl md:text-3xl mb-4">{headline}</h1>
       )}
-      {text && <p className="text-lg md:text-xl mx-2 sm:mx-0">{text}</p>}
+      {text && (
+        <p className="text-lg md:text-xl mx-2 sm:mx-0 leading-tight">{text}</p>
+      )}
     </div>
   )
 }

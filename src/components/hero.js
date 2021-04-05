@@ -21,11 +21,14 @@ const Hero = ({ children, subtitle }) => {
   }
 
   return (
-    <div className="max-w-full bg-black">
+    <div
+      className="bg-black"
+      style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
+    >
       <div className="mx-auto relative">
         {children && (
-          <div className="flex justify-center pt-4 mx-4">
-            <h1 className="text-xl text-white text-center uppercase">
+          <div className="flex justify-center pt-4">
+            <h1 className="text-2xl text-white text-center uppercase leading-6">
               {children}
             </h1>
           </div>

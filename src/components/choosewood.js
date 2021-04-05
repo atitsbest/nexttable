@@ -30,12 +30,18 @@ const ChooseWood = ({ woods, value, onChange }) => {
   `)
 
   return (
-    <div className="max-w bg-gray-100 pt-4 pb-4 mt-8">
+    <div
+      className="max-w bg-gray-100 pt-4 pb-4 mt-8 px-4"
+      style={{
+        marginLeft: "-1rem",
+        marginRight: "-1rem",
+      }}
+    >
       <div className="container mx-auto">
-        <h2 className="text-xl md:text-2xl lg:text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline">
+        <h3 className="text-xl md:text-2xl lg:text-3xl uppercase text-center mt-6 font-normal flex justify-center items-baseline">
           <small className="mr-2 font-mono text-gray-500">2.</small>
           Holz wählen
-        </h2>
+        </h3>
         <ul
           className={` sm:grid grid-cols-${woods.length} gap-4`}
           style={{
@@ -63,7 +69,7 @@ function Item({ image, text, selected, onSelectionChange }) {
   return (
     // eslint-disable-next-line
     <li
-      className={`mx-4 sm:mx-0 text-center cursor-pointer pb-4 pl-2 pr-2 sm:pl-0 sm:pr-0 rounded-sm ${
+      className={`text-center cursor-pointer pb-4 pl-2 pr-2 sm:pl-0 sm:pr-0 rounded-sm ${
         selected ? "bg-black text-white" : "hover:bg-gray-200"
       }`}
       onClick={onSelectionChange}

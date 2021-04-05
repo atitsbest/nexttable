@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 const Explosion = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "xtable.png" }) {
+      placeholderImage: file(relativePath: { eq: "explosion.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1400) {
             ...GatsbyImageSharpFluid
@@ -78,7 +78,9 @@ function Item({ headline, text, right }) {
         textAlign: right ? "right" : "left",
       }}
     >
-      <h2 className="leading-tight w-8/12">{headline}</h2>
+      <strong className="leading-tight w-8/12 whitespace-nowrap">
+        {headline}
+      </strong>
       <span className="text-xs w-8/12">{text}</span>
       <div
         className="border-b border-gray-500 mb-4 w-7/12 pt-1"

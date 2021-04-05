@@ -4,7 +4,7 @@ import React from "react"
 import Logo from "./logo"
 
 const Header = ({ siteTitle }) => (
-  <header className="pt-2 pb-3 md:pt-4 md:pb-5 bg-black">
+  <header className="pt-2 pb-3 md:py-3 bg-black">
     <div className="mx-auto">
       <h1 className="m-0 text-center">
         <Link

@@ -44,17 +44,17 @@ const AvailableWood = ({ selector }) => {
       >
         <Item
           image={data.appleImage.childImageSharp.fluid}
-          title="NExT Table - Apfel"
+          title="NExT TABLE - Apfel"
           description="Das Holz des Apfelbaumes besticht durch sein außergewöhnliches Farbspiel."
         />
         <Item
           image={data.nutImage.childImageSharp.fluid}
-          title="NExT Table - Nuss"
+          title="NExT TABLE - Nuss"
           description="Das Holz des Nussbaumes ist eine der edelsten heimischen Holzarten."
         />
         <Item
           image={data.mapleImage.childImageSharp.fluid}
-          title="NExT Table - Ahorn"
+          title="NExT TABLE - Ahorn"
           description="Das Ahornholz ist der hellhäutige Ästhet unter den heimischen Hölzern."
           nodivider
         />
@@ -77,8 +77,8 @@ function Item({ image, title, description, nodivider }) {
         <Img fluid={image} />
         <strong className="pt-8 font-serif whitespace-nowrap">{title}</strong>
       </Link>
-      <p className="mt-2">{description}</p>
-      <strong className="font-serif mt-1">Mehr...</strong>
+      <p className="mt-4">{description}</p>
+      {/*<strong className="mt-1">Mehr...</strong>*/}
       {!nodivider && <Divider className="visible md:invisible" />}
     </li>
   )

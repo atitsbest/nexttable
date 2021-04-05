@@ -3,7 +3,7 @@ import React from "react"
 function Divider(props) {
   return (
     <div {...props}>
-      <div className="mb-4 mt-4 border-t border-gray-400"></div>
+      <div className="md:mx-0 mb-4 mt-4 border-t border-gray-400"></div>
     </div>
   )
 }

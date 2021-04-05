@@ -9,7 +9,7 @@ const Contact = () => (
     </a>
     <Swelltext
       subheadline="Ein Tisch lädt ein zum Gespräch"
-      text="NExT Table hat viel zu erzählen. Sind Sie neugierig und haben noch Fragen? Wir geben gerne Auskunft - bei einem Tischgespräch rund um den NExT Table."
+      text="NExT TABLE hat viel zu erzählen. Sind Sie neugierig und haben noch Fragen? Wir geben gerne Auskunft - bei einem Tischgespräch rund um den NExT TABLE."
     />
   </div>
 )

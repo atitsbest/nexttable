@@ -38,6 +38,7 @@ const IndexPage = () => (
     <Megablah />
     <Divider className="invisible md:visible" />
     <HappyLady />
+    <Divider />
     <Gotoshop />
   </Layout>
 )
