@@ -40,7 +40,7 @@ const Explosion = () => {
           <Img
             fluid={{
               ...data.placeholderImage.childImageSharp.fluid,
-              aspectRatio: 21 / 9,
+              aspectRatio: 29 / 9,
             }}
             className="mx-auto w-4/5"
           />
