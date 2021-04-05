@@ -10,9 +10,7 @@ import { withPrefix } from "gatsby"
 import { API } from "aws-amplify"
 import { v4 as uuidv4 } from "uuid"
 
-const stripePromise = loadStripe(
-  "pk_live_51IEg9pAk2f4BlUnV1vjXv1apakeDVWVfCnvsEdRT7GZqsnWi7DMuUzR1Hk1YOKEzKcgFr0MzDB4HTegAmbz7J93300mB48Fyij"
-)
+const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY)
 
 const sizes = [
   { length: 180, width: 120, price: 13200 },
