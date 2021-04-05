@@ -43,7 +43,7 @@ const ChooseWood = ({ woods, value, onChange }) => {
           Holz wählen
         </h3>
         <ul
-          className={` sm:grid grid-cols-${woods.length} gap-4`}
+          className={` md:grid md:grid-cols-${woods.length} md:gap-4`}
           style={{
             margin: 0,
             padding: 0,
