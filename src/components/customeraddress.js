@@ -48,7 +48,7 @@ function Input({
   values,
 }) {
   const inputClasses =
-    "mt-1 block w-full bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+    "p-2 mt-1 block w-full bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
   const labelClasses = "block w-full mt-2"
   return (
     <label className={`${labelClasses} ${errors[name] ? "text-red-500" : ""}`}>
