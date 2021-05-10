@@ -29,8 +29,8 @@ const TheJo = () => {
         <div className="mx-2 mt-2 md:absolute md:inset-0 md:mt-6 md:ml-6 flex flex-col align-start">
           <p className="text-sm md:text-lg lg:text-xl md:w-7/12 text-left mb-4 mt-2 leading-tight">
             "Für mich ist entscheidend, dass Design mit Wissen und Kompetenz
-            umgesetzt wird. Next Table ist deshalb besonders, weil bei diesem
-            Tisch alles passt. Perfektes Handwerk macht meinen Next Table zu
+            umgesetzt wird. NExT TABLE ist deshalb besonders, weil bei diesem
+            Tisch alles passt. Perfektes Handwerk macht meinen NExT TABLE zu
             einem Designstück zum Leben."
           </p>
           <strong className="text-sm md:text-lg lg:text-xl block">

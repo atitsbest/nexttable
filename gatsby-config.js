@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Nexttable`,
+    title: `NExT TABLE`,
     description: ``,
     author: `atitsbest.dev@gmail.com`,
   },

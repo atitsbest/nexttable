@@ -24,12 +24,12 @@ const IndexPage = () => (
     </Hero>
     <Swelltext text=" High-end Design trifft Handwerk mit Perfektion. Das Ergebnis: ein einzigartiger Tisch zum Wohnen und Leben. Stilvolles Design für perfekte Augenblicke. " />
     <Explosion />
-    <Swelltext text="Ein Tisch gibt einem Wohnraum ein Zentrum; ein Ort, der Treffpunkt und Mittelpunkt ist. Joachim Jungreithmayr hat Next Table genau dafür entwickelt: außergewöhnlich edel im Design, wegweisende Perfektion in der Herstellung. Höchste Ansprüche bis ins Detail." />
+    <Swelltext text="Ein Tisch gibt einem Wohnraum ein Zentrum; ein Ort, der Treffpunkt und Mittelpunkt ist. Joachim Jungreithmayr hat NExT TABLE genau dafür entwickelt: außergewöhnlich edel im Design, wegweisende Perfektion in der Herstellung. Höchste Ansprüche bis ins Detail." />
     <TheJo />
     <Divider className="visible md:invisible" />
     <Swelltext
       headline="Holz - ein Gefühl fürs Leben"
-      text="Next Table, das sind hochwertige Materialien, elegant und unaufdringlich kombiniert. Ein versierter Umgang mit Holz schafft ein neues Form- und Raumgefühl. Ein Tisch, mehr als ein Lebensgefühl in Apfel, Nuss oder Ahorn."
+      text="NExT TABLE, das sind hochwertige Materialien, elegant und unaufdringlich kombiniert. Ein versierter Umgang mit Holz schafft ein neues Form- und Raumgefühl. Ein Tisch, mehr als ein Lebensgefühl in Apfel, Nuss oder Ahorn."
     />
     <AvailableWood />
     <Divider />

@@ -34,7 +34,7 @@ app.post("/checkout", async function (req, res) {
           price_data: {
             currency: "eur",
             product_data: {
-              name: `Next Table ${req.body.dimension} in ${req.body.wood}`,
+              name: `NExT TABLE ${req.body.dimension} in ${req.body.wood}`,
               images: [req.body.imageUrl],
             },
             unit_amount: req.body.price,

@@ -49,8 +49,8 @@ app.post("/webhook", async function (req, res) {
         console.log("sending mail...")
         await sendMail({
           to: req.body.data.object.customer_email,
-          subject: `NextTable - Zahlung für erhalten`,
-          body: `+++ TEST this is a test and not real. ignore this email!. TEST +++\r\n\r\nVielen Danke, dass Sie sich für NextTable entschieden haben. Wir haben Ihre Zahlung erhalten.\r\nLieferung erfolg nach ${JSON.stringify(
+          subject: `NExT TABLE - Zahlung für erhalten`,
+          body: `+++ TEST this is a test and not real. ignore this email!. TEST +++\r\n\r\nVielen Danke, dass Sie sich für NExT TABLE entschieden haben. Wir haben Ihre Zahlung erhalten.\r\nLieferung erfolg nach ${JSON.stringify(
             req.body.data.object.metadata
           )}.`,
         })
