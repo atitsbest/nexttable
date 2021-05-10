@@ -18,12 +18,14 @@ function Fulfillment() {
           </p>
         </div>
         <div className="w-full sm:w-3/6 pl-6 sm:pl-0 ml-4 sm:ml-0 text-sm ml-2">
-          <strong className="invisible sm:visible">&nbsp;</strong>
+          <strong className="invisible sm:visible absolute sm:static">
+            &nbsp;
+          </strong>
           <p className="text-gray-700">
             sehr gut befunden haben, starten wir mit der Produktion. Der Tisch
             wird individuell nur für Sie in unserer Werkstatt in Österreich
-            hergestellt. Nach Fertigstellung und Endkotrolle vereinbaren wir uns
-            einen Liefertermin. Und die Freude beginnt!
+            hergestellt. Nach Fertigstellung und Endkontrolle vereinbaren wir
+            uns einen Liefertermin. Und die Freude beginnt!
           </p>
         </div>
       </div>

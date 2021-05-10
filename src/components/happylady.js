@@ -29,7 +29,7 @@ const HappyLady = () => {
         />
         <div className="mx-2 mt-2 md:absolute md:inset-0 md:mt-6 md:ml-6 flex flex-col align-start md:text-white">
           <p className="text-sm md:text-lg lg:text-xl md:w-5/12 text-left mb-4">
-            "Egal ob in Kunst und Kultur, oder im Sport: mich überzweugen
+            "Egal ob in Kunst und Kultur, oder im Sport: mich überzeugen
             Originalität, Kreativität und Leidenschaft für die "großen" und
             "kleinen" Dinge im Leben. Vor allem aber bin ich neugierig auf
             Menschen. NExT Table ist für mich der Tisch, der all das in sich
