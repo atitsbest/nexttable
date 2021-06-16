@@ -19,7 +19,7 @@ function Delivery() {
             <strong>Alle anderen Länder:</strong> auf Anfrage.*
             <br />
             <br />
-            *Wir wählen Versandart und -weg, wobe wir uns um eine möglichst
+            *Wir wählen Versandart und -weg, wobei wir uns um eine möglichst
             kostengünstige Versandart und um die Berücksichtigung der
             Kundenwünsche bemühen.
           </p>
