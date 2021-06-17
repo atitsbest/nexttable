@@ -22,6 +22,15 @@ const IndexPage = () => (
         <br /> Stilvolles Wohnen mit X
       </>
     </Hero>
+    <model-viewer
+      src="3dmodels/nexttable.glb"
+      shadow-intensity="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      alt="A 3D model carousel"
+      style={{ width: "100%", height: 400 }}
+    ></model-viewer>
     <Swelltext text=" High-end Design trifft Handwerk mit Perfektion. Das Ergebnis: ein einzigartiger Tisch zum Wohnen und Leben. Stilvolles Design für perfekte Augenblicke. " />
     <Explosion />
     <Swelltext text="Ein Tisch gibt einem Wohnraum ein Zentrum; ein Ort, der Treffpunkt und Mittelpunkt ist. Joachim Jungreithmayr hat NExT TABLE genau dafür entwickelt: außergewöhnlich edel im Design, wegweisende Perfektion in der Herstellung. Höchste Ansprüche bis ins Detail." />
