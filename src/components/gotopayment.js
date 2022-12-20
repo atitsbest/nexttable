@@ -8,7 +8,7 @@ function GotoPayment({ enabled, loading }) {
         className={`text-xl uppercase border-2 border-black p-2 pl-8 pr-8 
          flex items-center ${
            enabled
-             ? "cursor-pointer hover:text-white hover:bg-black"
+             ? "cursor-pointer hover:text-white hover:bg-dark"
              : "cursor-not-allowed"
          }
         ${loading ? "bg-black text-gray-200" : ""}

@@ -22,7 +22,7 @@ const Hero = ({ children, subtitle }) => {
 
   return (
     <div
-      className="bg-black"
+      className="bg-dark"
       style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
     >
       <div className="mx-auto relative">
