@@ -35,6 +35,9 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
+  "overrides": {
+    "graphql": "14.7.0"
+  },
   "keywords": [
     "gatsby"
   ],
