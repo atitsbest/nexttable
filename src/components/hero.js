@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 const Hero = ({ children, subtitle }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "xtable-2.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 1960) {
             ...GatsbyImageSharpFluid
@@ -22,7 +22,7 @@ const Hero = ({ children, subtitle }) => {
 
   return (
     <div
-      className="bg-black"
+      className="bg-dark"
       style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
     >
       <div className="mx-auto relative">

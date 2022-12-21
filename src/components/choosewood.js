@@ -70,7 +70,7 @@ function Item({ image, text, selected, onSelectionChange }) {
     // eslint-disable-next-line
     <li
       className={`text-center cursor-pointer pb-4 pl-2 pr-2 sm:pl-0 sm:pr-0 rounded-sm ${
-        selected ? "bg-black text-white" : "hover:bg-gray-200"
+        selected ? "bg-dark text-white" : "hover:bg-gray-200"
       }`}
       onClick={onSelectionChange}
     >
